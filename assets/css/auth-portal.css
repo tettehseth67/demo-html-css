@@ -1,0 +1,135 @@
+/* ==========================================================================
+   🛡️ MULTI-LEVEL CLEARANCE GATE SELECTION GRAPHICS
+   ========================================================================== */
+
+.gate-layout-canvas {
+    background-color: #f8fafc;
+    /* Crisp Light UI canvas color */
+    color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+}
+
+.gate-selection-viewport-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.gate-header-block {
+    text-align: center;
+}
+
+.gate-brand-node {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.gate-header-block h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.gate-header-block p {
+    font-size: 1.05rem;
+    color: #475569;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Three-column card selection mapping layout */
+.gate-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.gate-profile-option-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gate-card-icon {
+    font-size: 2.25rem;
+    margin-bottom: 8px;
+}
+
+.gate-profile-option-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.gate-profile-option-card p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+    flex: 1;
+    /* Pushes action link elements cleanly down to the base */
+}
+
+.gate-action-arrow-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-top: 16px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+/* --- HOVER PROFILE ACTIONS --- */
+.gate-profile-option-card:hover {
+    transform: translateY(-4px);
+    border-color: #2563eb;
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.05);
+}
+
+.gate-profile-option-card:hover .gate-action-arrow-tag {
+    transform: translateX(4px);
+    color: #1d4ed8;
+}
+
+.gate-terminal-notice p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* --- MOBILE TRACK COMPACTION --- */
+@media screen and (max-width: 640px) {
+    .gate-options-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gate-profile-option-card {
+        padding: 30px;
+    }
+
+    .gate-header-block h1 {
+        font-size: 1.75rem;
+    }
+}

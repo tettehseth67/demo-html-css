@@ -1,0 +1,157 @@
+/* ==========================================================================
+   🛠️ ROLE-SEGREGATED DECOUPLED STYLING MODIFIERS
+   ========================================================================== */
+
+/* Universal Layout Sizing Overrides */
+.full-width-panel {
+    width: 100%;
+}
+
+.table-save-action-bar {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Student Report Card Layout Customizations */
+.fluid-card-unshadowed {
+    max-width: 100% !important;
+    box-shadow: none !important;
+}
+
+.margin-bottom-medium {
+    margin-bottom: 24px;
+}
+
+.gpa-highlight-large {
+    color: var(--interactive-blue);
+    font-size: 1.4rem;
+}
+
+.bold-text-weight {
+    font-weight: 700 !important;
+}
+
+/* Financial Overdue Custom Status Badges (Matches Light UI) */
+.verification-badge.status-review {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Custom utility tracking block width mapping straight to course bar fills */
+.bar-fill-w-83 {
+    width: 83.3%;
+}
+
+/* ==========================================================================
+   📚 FACULTY COURSES MANAGEMENT REGISTRY - DESIGN BLUEPRINTS
+   ========================================================================== */
+
+/* 1. Master Inventory Adaptive Card Layout Grid */
+.courses-catalog-flex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 24px;
+    margin-top: 16px;
+}
+
+/* 2. Course Item Container Profiles */
+.course-registry-item-card {
+    background-color: var(--surface-bg);
+    border: 1px solid var(--border-structural);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.course-registry-item-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--interactive-blue);
+}
+
+.course-card-top-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* 3. Department Colored Tracking Badges */
+.subject-dept-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: inline-block;
+}
+
+.dept-math {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.subject-reference-code {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.course-registry-item-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.instructor-assignment-line {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* 4. Enrollment Progression Metrics Bars */
+.capacity-tracker-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.capacity-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.capacity-progress-rail {
+    background-color: var(--canvas-bg);
+    height: 8px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid var(--border-structural);
+}
+
+.capacity-progress-fill {
+    height: 100%;
+    border-radius: 50px;
+}
+
+.capacity-progress-fill.speed-normal {
+    background-color: var(--interactive-blue);
+}
+
+/* Overrides to trigger bold alert colors when classes reach maximum capacity */
+.capacity-progress-fill.speed-full {
+    background-color: #ef4444;
+}
+
+.status-full-rail {
+    background-color: #fee2e2;
+}

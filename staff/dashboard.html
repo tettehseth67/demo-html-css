@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Portal Dashboard | EduManage Admin</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- STAFF SPECIFIC NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Staff</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item active"><a href="staff-dashboard.html">📊 Attendance Logs</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 My Assigned Classes</a></li>
+                <li class="nav-link-item"><a href="index.html">🚪 Terminate Session</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="primary-workspace-engine">
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Search student names inside your assigned blocks...">
+            </div>
+            <div class="operator-profile-card">
+
+
+                <span class="profile-name">Prof. Clara Vance</span>
+                <span class="profile-role">Mathematics &amp; Data</span>
+            </div>
+            <div class="avatar-fallback-frame">CV</div>
+        </header>
+
+        <div class="viewport-data-container">
+            <header class="view-intro-title split-title-row">
+                <div>
+                    <h1>Daily Attendance Tracking</h1>
+                    <p>Mark presence logs for your active cohort block groups.</p>
+                </div>
+                <div class="header-action-dropdown">
+                    <select class="cohort-select-dropdown">
+                        <option>MAT-401: Linear Algebra &amp; Stats</option>
+                        <option>MAT-410: Computational Statistics</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- TRACKING MATRIX LIST -->
+            <section class="data-table-panel-card full-width-panel">
+                <table class="registry-data-table">
+                    <thead>
+                        <tr>
+                            <th>Roll Code</th>
+                            <th>Student Full Name</th>
+                            <th class="center-align-cell">Present</th>
+                            <th class="center-align-cell">Late</th>
+                            <th class="center-align-cell">Absent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#STU-8841</td>
+                            <td><strong>Evelyn Vance</strong></td>
+                            <td class="center-align-cell"><input type="radio" name="st-1"
+                                    class="custom-radio-input present-radio" checked></td>
+                            <td class="center-align-cell"><input type="radio" name="st-1"
+                                    class="custom-radio-input late-radio"></td>
+                            <td class="center-align-cell"><input type="radio" name="st-1"
+                                    class="custom-radio-input absent-radio"></td>
+                        </tr>
+                        <tr>
+                            <td>#STU-1092</td>
+                            <td><strong>Julian Kael</strong></td>
+                            <td class="center-align-cell"><input type="radio" name="st-2"
+                                    class="custom-radio-input present-radio" checked></td>
+                            <td class="center-align-cell"><input type="radio" name="st-2"
+                                    class="custom-radio-input late-radio"></td>
+                            <td class="center-align-cell"><input type="radio" name="st-2"
+                                    class="custom-radio-input absent-radio"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-save-action-bar">
+                    <button type="button" class="commit-sheet-btn">Commit Changes</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Assigned Classes | EduManage Staff</title>
+    <!-- Linking up two levels to find the shared admin style sheet -->
+    <link rel="stylesheet" href="../assets/css/admin-dashboard.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- STAFF SPECIFIC NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Staff</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="./dashboard.html">📊 Attendance Logs</a></li>
+                <li class="nav-link-item active"><a href="./courses.html">📚 My Assigned Classes</a></li>
+                <li class="nav-link-item"><a href="../../public/index.html">🚪 Terminate Session</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA WORKSPACE ENGINE -->
+    <main class="primary-workspace-engine">
+
+        <!-- SYSTEM NAVIGATION UTILITY NAVBAR -->
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Filter assigned syllabus items or course tags..." disabled>
+            </div>
+
+            <div class="operator-profile-card">
+
+
+                <span class="profile-name">Prof. Clara Vance</span>
+                <span class="profile-role">Mathematics &amp; Data</span>
+            </div>
+            <div class="avatar-fallback-frame">CV</div>
+        </header>
+
+        <!-- DASHBOARD CONTAINER VIEWPORT -->
+        <div class="viewport-data-container">
+            <header class="view-intro-title">
+                <h1>My Teaching Allocation Load</h1>
+                <p>Review active curricula schedules, monitor section roll counts, and check student enrollment limits.
+                </p>
+            </header>
+
+            <!-- ACADEMIC TRACK STATISTICS TILES -->
+            <section class="metrics-grid-layout">
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Assigned Sections</span>
+                    <div class="metric-card-value">2</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Total Teaching Hours / Wk</span>
+                    <div class="metric-card-value">16</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Total Allocated Students</span>
+                    <div class="metric-card-value">55</div>
+                </div>
+            </section>
+
+            <!-- STAFF SPECIFIC CURRICULUM GRID -->
+            <div class="courses-catalog-flex-grid">
+
+                <!-- ALLOCATED SUBJECT CARD 1 -->
+                <div class="course-registry-item-card">
+                    <div class="course-card-top-track">
+                        <span class="subject-dept-badge dept-math">Mathematics &amp; Data</span>
+                        <span class="subject-reference-code">MAT-401</span>
+                    </div>
+                    <h3>Linear Algebra &amp; Statistics</h3>
+                    <p class="instructor-assignment-line">Active Cohort: <strong>Grade 12 Tech Block</strong></p>
+
+                    <div class="capacity-tracker-block">
+                        <div class="capacity-meta-row">
+                            <span>Enrollment Capacity</span>
+                            <strong>30 / 30 Students</strong>
+                        </div>
+                        <div class="capacity-progress-rail status-full-rail">
+                            <div class="capacity-progress-fill speed-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALLOCATED SUBJECT CARD 2 -->
+                <div class="course-registry-item-card">
+                    <div class="course-card-top-track">
+                        <span class="subject-dept-badge dept-math">Mathematics &amp; Data</span>
+                        <span class="subject-reference-code">MAT-410</span>
+                    </div>
+                    <h3>Computational Statistics</h3>
+                    <p class="instructor-assignment-line">Active Cohort: <strong>Grade 11 Tech Block</strong></p>
+
+                    <div class="capacity-tracker-block">
+                        <div class="capacity-meta-row">
+                            <span>Enrollment Capacity</span>
+                            <strong>25 / 30 Students</strong>
+                        </div>
+                        <div class="capacity-progress-rail">
+                            <div class="capacity-progress-fill speed-normal bar-fill-w-83"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- / .courses-catalog-flex-grid -->
+        </div> <!-- / .viewport-data-container -->
+    </main>
+
+</body>
+
+</html>

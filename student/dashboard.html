@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Workspace Portal | EduManage</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- STUDENT SPECIFIC NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Student</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item active"><a href="dashboard.html">📜 Grades &amp; Reports</a></li>
+                <li class="nav-link-item"><a href="invoices.html">💳 Fees &amp; Invoices</a></li>
+                <li class="nav-link-item"><a href="index.html">🚪 Terminate Session</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="primary-workspace-engine">
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Print Mode Active — Ctrl+P to Print Layout" disabled>
+            </div>
+            <button type="button" class="commit-sheet-btn" onclick="window.print()">🖨️ Print Report Card</button>
+        </header>
+
+        <div class="viewport-data-container">
+            <div class="report-card-print-frame fluid-card-unshadowed">
+
+                <header class="report-card-header-block">
+                    <div class="report-school-brand">
+                        <h2>Official Scholastic Record</h2>
+                        <p>Student Academic Performance Transcript Overview</p>
+                    </div>
+                    <div class="report-term-badge">
+                        <strong>Student ID:</strong>
+                        <span>#SIS-8841</span>
+                    </div>
+                </header>
+
+                <!-- INDIVIDUAL MARKS TIERS OVERVIEW -->
+                <section class="student-profile-summary-grid margin-bottom-medium">
+                    <div class="profile-data-cell">
+                        <span class="profile-cell-label">Current Term GPA:</span>
+                        <strong class="profile-cell-value gpa-highlight-large">3.82 / 4.00</strong>
+                    </div>
+                    <div class="profile-data-cell">
+                        <span class="profile-cell-label">Scholastic Standing:</span>
+                        <strong class="profile-cell-value status-passed-text">Honor Roll Cleared</strong>
+                    </div>
+                </section>
+
+                <section class="report-card-table-panel">
+                    <table class="report-grades-table">
+                        <thead>
+                            <tr>
+                                <th>Course Title</th>
+                                <th class="center-align-text">Grade Score</th>
+                                <th class="center-align-text">Letter Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Advanced Organic Chemistry</td>
+                                <td class="center-align-text">94 / 100</td>
+                                <td class="center-align-text bold-text-weight">A</td>
+                            </tr>
+                            <tr>
+                                <td>Linear Algebra &amp; Statistics</td>
+                                <td class="center-align-text">88 / 100</td>
+                                <td class="center-align-text bold-text-weight">B+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
