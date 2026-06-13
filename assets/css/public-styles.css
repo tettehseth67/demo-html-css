@@ -230,24 +230,6 @@ body {
     transform: scale(0.98);
 }
 
-/* ==========================================================================
-   📶 RESPONSIVE MOBILE FORM SCALE ADJUSTMENTS
-   ========================================================================== */
-@media screen and (max-width: 550px) {
-    .hero-actions-row {
-        flex-direction: column;
-        width: 100%;
-        padding: 0 24px;
-        gap: 12px;
-    }
-
-    .hero-actions-row .btn-primary,
-    .hero-actions-row .btn-secondary {
-        width: 100%;
-        /* Stacks links vertically and spans full smartphone device widths */
-    }
-}
-
 /* Centered Visual Blueprint Grid Mesh Box Configuration */
 .hero-visual-block {
     display: flex;
@@ -270,21 +252,21 @@ body {
     }
 }
 
+/* ==========================================================================
+   📶 RESPONSIVE MOBILE FORM SCALE ADJUSTMENTS
+   ========================================================================== */
 @media screen and (max-width: 550px) {
     .hero-actions-row {
         flex-direction: column;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 24px;
+        gap: 12px;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    .hero-actions-row .btn-primary,
+    .hero-actions-row .btn-secondary {
         width: 100%;
-        text-align: center;
-    }
-
-    .blueprint-canvas-card {
-        height: 220px;
+        /* Stacks links vertically and spans full smartphone device widths */
     }
 }
 
