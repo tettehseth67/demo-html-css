@@ -931,7 +931,6 @@ body {
    🖨️ NATIVE PHYSICAL PRINTER OVERRIDES (AUTOMATIC PROCESSING)
    ========================================================================== */
 @media print {
-
     /* Completely eliminate dashboard navigation, top header utility toolbars, and scroll boxes */
     body {
         grid-template-columns: 1fr !important;
@@ -942,8 +941,7 @@ body {
     .side-navigation-rail,
     .utility-navbar-top,
     .commit-sheet-btn {
-        display: none !important;
-        /* Drops tracking sidebars out of print process entirely */
+        display: none !important; /* Drops tracking sidebars out of print process entirely */
     }
 
     .primary-workspace-engine {
@@ -962,19 +960,18 @@ body {
         padding: 0 !important;
         max-width: 100% !important;
     }
-
+    
     .student-profile-summary-grid {
-        background-color: #f8fafc !important;
-        /* Retains clean light contrast in gray prints */
-        -webkit-print-color-adjust: exact;
-        /* Standardizes background color printing across engine options */
+        background-color: #f8fafc !important; /* Retains clean light contrast in gray prints */
+        -webkit-print-color-adjust: exact; /* Standardizes background color printing across engine options */
         print-color-adjust: exact;
     }
-
+    
     .gpa-value {
         color: #000000 !important;
     }
 }
+
 
 /* --- 2. LAPTOP & MEDIUM SCREEN OPTIMIZATIONS (Under 1200px) --- */
 @media screen and (max-width: 1200px) {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parent Resources | EduManage Academy</title>
     <!-- Connecting the shared global layout stylesheet configuration -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/public-styles.css">
+    <link rel="stylesheet" href="../assets/css/public-styles.css">
 </head>
 
 <body>
@@ -14,17 +14,35 @@
     <!-- GLOBAL SITE NAVIGATION HEADER -->
     <header class="public-site-header">
         <div class="header-container">
-            <a href="index.html" class="site-logo">🏫 EduManage Academy</a>
+    
+            <a href="../index.html" class="site-logo">🏫 EduManage Academy</a>
+    
+            <!-- Pure CSS Responsive Navigation Trigger System -->
+            <input type="checkbox" id="header-menu-toggle" class="header-toggle-checkbox">
+            <label for="header-menu-toggle" class="header-hamburger-btn" aria-label="Toggle Menu Layout">
+                <span class="hamburger-bar-line"></span>
+                <span class="hamburger-bar-line"></span>
+                <span class="hamburger-bar-line"></span>
+            </label>
+    
+            <!-- Navigation Links Wrapper Matrix -->
             <nav class="public-nav">
                 <ul class="public-nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="academics.html">Academics</a></li>
                     <li><a href="admissions.html">Admissions Intake</a></li>
                     <li class="active"><a href="resources.html">Parent Resources</a></li>
                     <li><a href="careers.html">Careers</a></li>
+                    <!-- Visible strictly on compact mobile menu slide-out panels -->
+                    <li class="mobile-only-cta"><a href="../admin/gate.html" class="portal-cta-btn">System Portal
+                            Login</a>
+                    </li>
                 </ul>
             </nav>
-            <a href="./login.html" class="portal-cta-btn">System Portal Login</a>
+            <!-- Desktop Profile Gateway Entry CTA Button -->
+            <div class="header-desktop-actions">
+                <a href="../admin/gate.html" class="portal-cta-btn">System Portal Login</a>
+            </div>
         </div>
     </header>
 
@@ -38,49 +56,35 @@
                     your children.</p>
             </header>
 
-            <!-- SPLIT GRAPHICAL INFORMATION GRID -->
-            <div class="operational-split-grid"
-                style="display: grid; grid-template-columns: 2fr 1fr; gap: 32px; align-items: start;">
+            <!-- ASYMMETRIC STICKY BLUEPRINT LAYOUT GRID -->
+            <div class="resources-workspace-split">
 
                 <!-- COLUMN A: DOCUMENT TRACK LINKS & GRIDS -->
-                <div class="resource-documents-stack" style="display: flex; flex-direction: column; gap: 24px;">
+                <div class="resource-documents-stack">
 
-                    <section class="division-card" style="padding: 30px;">
+                    <section class="division-card resource-card-padding">
                         <h3>📥 Institutional Downloads &amp; Handbooks</h3>
-                        <p style="margin: 10px 0 20px 0; font-size: 0.95rem; color: var(--pub-text-second);">Review the
-                            official regulatory guidelines and code books for the active academic season.</p>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
-                            <li><a href="#"
-                                    style="color: var(--pub-theme-accent); text-decoration: none; font-weight: 600;">📄
-                                    2026-2027 Student &amp; Parent Handbook (PDF)</a></li>
-                            <li><a href="#"
-                                    style="color: var(--pub-theme-accent); text-decoration: none; font-weight: 600;">📅
-                                    Official Academic Master Calendar Sheet (PDF)</a></li>
-                            <li><a href="#"
-                                    style="color: var(--pub-theme-accent); text-decoration: none; font-weight: 600;">👕
-                                    Dress Code &amp; Uniform Procurement Grid (PDF)</a></li>
+                        <p class="resource-section-desc">Review the official regulatory guidelines and code books for
+                            the active academic season.</p>
+                        <ul class="resource-download-list">
+                            <li><a href="#">📄 2026-2027 Student &amp; Parent Handbook (PDF)</a></li>
+                            <li><a href="#">📅 Official Academic Master Calendar Sheet (PDF)</a></li>
+                            <li><a href="#">👕 Dress Code &amp; Uniform Procurement Grid (PDF)</a></li>
                         </ul>
                     </section>
 
-                    <section class="division-card" style="padding: 30px;">
+                    <section class="division-card resource-card-padding">
                         <h3>📞 Support &amp; Communication Channels</h3>
-                        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--pub-text-second);">Our
-                            administrative help desk tracks responses sequentially inside operational business hours.
-                        </p>
-                        <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div>
-                                <strong
-                                    style="font-size: 0.85rem; text-transform: uppercase; color: var(--pub-text-second);">Registrar
-                                    Office</strong>
-                                <p style="font-size: 0.95rem; font-weight: 600; margin-top: 4px;">
-                                    registrar@edumanagecore.edu</p>
+                        <p class="resource-section-desc">Our administrative help desk tracks responses sequentially
+                            inside operational business hours.</p>
+                        <div class="resource-contact-grid">
+                            <div class="contact-channel-cell">
+                                <strong class="contact-cell-label">Registrar Office</strong>
+                                <p class="contact-cell-value">registrar@edumanagecore.edu</p>
                             </div>
-                            <div>
-                                <strong
-                                    style="font-size: 0.85rem; text-transform: uppercase; color: var(--pub-text-second);">Billing
-                                    Department</strong>
-                                <p style="font-size: 0.95rem; font-weight: 600; margin-top: 4px;">
-                                    finance@edumanagecore.edu</p>
+                            <div class="contact-channel-cell">
+                                <strong class="contact-cell-label">Billing Department</strong>
+                                <p class="contact-cell-value">finance@edumanagecore.edu</p>
                             </div>
                         </div>
                     </section>
@@ -88,11 +92,10 @@
                 </div>
 
                 <!-- COLUMN B: INTERACTIVE MATHEMATICAL PLACEMENT CALCULATOR -->
-                <section class="compact-form-card" style="margin-top: 0; width: 100%;">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--pub-text-prime);">Grade Placement
-                        Tool</h3>
-                    <p style="font-size: 0.85rem; color: var(--pub-text-second); margin-bottom: 20px;">Input your
-                        child's age to compute their standard target cohort allocation class.</p>
+                <aside class="compact-form-card resource-calculator-card">
+                    <h3>Grade Placement Tool</h3>
+                    <p class="calculator-desc">Input your child's age to compute their standard target cohort allocation
+                        class.</p>
 
                     <form id="placementCalcForm" onsubmit="return false;">
                         <div class="public-form-group">
@@ -103,32 +106,26 @@
                     </form>
 
                     <!-- CALCULATOR OUTPUT NOTICE FRAME (Hidden until evaluated) -->
-                    <div id="calculatorResultBox"
-                        style="display: none; margin-top: 20px; padding: 16px; border-radius: 8px; background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a;">
-                        <span
-                            style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">Recommended
-                            Target:</span>
-                        <strong id="targetPlacementOutput"
-                            style="font-size: 1.2rem; display: block; margin-bottom: 6px;">Grade 9 Junior Block</strong>
-                        <p style="font-size: 0.8rem; line-height: 1.4; color: #1e40af;">Placement is computed assuming a
-                            baseline age cutoff framework by standard enrollment parameters.</p>
+                    <div id="calculatorResultBox" class="calculator-result-panel">
+                        <span class="result-panel-tag">Recommended Target:</span>
+                        <strong id="targetPlacementOutput" class="result-panel-value">Grade 9 Junior Block</strong>
+                        <p class="result-panel-desc">Placement is computed assuming a baseline age cutoff framework by
+                            standard enrollment parameters.</p>
                     </div>
-                </section>
+                </aside>
 
-            </div>
+            </div> <!-- / .resources-workspace-split -->
         </div>
     </main>
 
-    <!-- GLOBAL SITE FOOTER -->
+    <!-- UNIVERSAL MULTI-COLUMN LIGHT UI FOOTER -->
     <footer class="public-site-footer">
         <div class="section-container footer-layout-grid">
-            <!-- BRAND HUB COLUMN -->
             <div class="footer-brand-column">
                 <span class="footer-logo">🏫 EduManage Academy</span>
                 <p class="footer-brand-bio">Centralized architectural learning environments delivering rigorous, modern
                     academic tracks for upcoming global scholars.</p>
             </div>
-            <!-- PUBLIC LINK MATRIX COLUMN 1 -->
             <div class="footer-links-column">
                 <h4>Academic Registry</h4>
                 <ul class="footer-nav-list">
@@ -137,7 +134,6 @@
                     <li><a href="resources.html">Parent Resources</a></li>
                 </ul>
             </div>
-            <!-- PUBLIC LINK MATRIX COLUMN 2 (NEW SECTIONS) -->
             <div class="footer-links-column">
                 <h4>Campus Portals</h4>
                 <ul class="footer-nav-list">
@@ -147,7 +143,6 @@
                 </ul>
             </div>
         </div>
-        <!-- LOWER COPYRIGHT SECURITY DEPLOYMENT TRACK -->
         <div class="footer-terminal-bar">
             <div class="section-container terminal-bar-flex">
                 <p>&copy; 2026 EduManage Core Academy. Central Systems Audited Configuration.</p>
@@ -156,7 +151,7 @@
         </div>
     </footer>
 
-    <!-- ⚡ CALCULATOR ALIGNMENT CONTROLLER SCRIPT -->
+    <!-- CALCULATOR INTERACTION LOGIC (Preserved safely at bottom) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const calcForm = document.getElementById('placementCalcForm');
@@ -167,11 +162,9 @@
             if (calcForm && ageInput && resultBox && outputText) {
                 calcForm.addEventListener('submit', (e) => {
                     e.preventDefault();
-
                     const age = parseInt(ageInput.value, 10);
                     let placementResult = "";
 
-                    // Simple age-to-grade matching algorithm metrics
                     if (age >= 14 && age <= 15) {
                         placementResult = "Grade 9 Junior Block";
                     } else if (age === 16) {
@@ -184,7 +177,6 @@
                         placementResult = "Early Childhood / Prep Track";
                     }
 
-                    // Render dynamic text payload block to viewport canvas elements
                     outputText.textContent = placementResult;
                     resultBox.style.display = 'block';
                 });
