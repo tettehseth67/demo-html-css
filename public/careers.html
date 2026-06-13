@@ -5,36 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Our Faculty | EduManage Academy</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/public-styles.css">
+    <!-- Corrected relative path to find styles from inside public/ directory -->
+    <link rel="stylesheet" href="../assets/css/public-styles.css">
 </head>
 
 <body>
 
+    <!-- GLOBAL SITE NAVIGATION HEADER -->
     <header class="public-site-header">
         <div class="header-container">
-            <a href="./index.html" class="site-logo">🏫 EduManage Academy</a>
-            <!-- Pure CSS Responsive Navigation Trigger System -->
+            <a href="../index.html" class="site-logo">🏫 EduManage Academy</a>
+
             <input type="checkbox" id="header-menu-toggle" class="header-toggle-checkbox">
             <label for="header-menu-toggle" class="header-hamburger-btn" aria-label="Toggle Menu Layout">
                 <span class="hamburger-bar-line"></span>
                 <span class="hamburger-bar-line"></span>
                 <span class="hamburger-bar-line"></span>
             </label>
-            <!-- Navigation Links Wrapper Matrix -->
+
             <nav class="public-nav">
                 <ul class="public-nav-links">
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="academics.html">Academics</a></li>
                     <li><a href="admissions.html">Admissions Intake</a></li>
                     <li><a href="resources.html">Parent Resources</a></li>
                     <li class="active"><a href="careers.html">Careers</a></li>
-                    <!-- Visible strictly on compact mobile menu slide-out panels -->
-                    <li class="mobile-only-cta"><a href="../admin/gate.html" class="portal-cta-btn">Portal
-                            Login</a>
+                    <li class="mobile-only-cta"><a href="../admin/gate.html" class="portal-cta-btn">Portal Login</a>
                     </li>
                 </ul>
             </nav>
-            <!-- Desktop Profile Gateway Entry CTA Button -->
+
             <div class="header-desktop-actions">
                 <a href="../admin/gate.html" class="portal-cta-btn">System Portal Login</a>
             </div>
@@ -51,7 +51,7 @@
             </header>
 
             <div class="compact-form-card full-width-override">
-                <h3 class="form-panel-title">Faculty Intake Application</h3>
+                <h3 class="form-panel-title">Faculty Onboarding Intake Application</h3>
                 <form id="careersForm" onsubmit="return false;" class="careers-portal-form">
                     <div class="public-form-group">
                         <label>Legal Full Name</label>
@@ -78,14 +78,12 @@
     </main>
 
     <footer class="public-site-footer">
-        <div class="section-container footer-layout-grid">
-            <!-- BRAND HUB COLUMN -->
+        <div class="footer-container">
             <div class="footer-brand-column">
                 <span class="footer-logo">🏫 EduManage Academy</span>
                 <p class="footer-brand-bio">Centralized architectural learning environments delivering rigorous, modern
                     academic tracks for upcoming global scholars.</p>
             </div>
-            <!-- PUBLIC LINK MATRIX COLUMN 1 -->
             <div class="footer-links-column">
                 <h4>Academic Registry</h4>
                 <ul class="footer-nav-list">
@@ -94,7 +92,6 @@
                     <li><a href="resources.html">Parent Resources</a></li>
                 </ul>
             </div>
-            <!-- PUBLIC LINK MATRIX COLUMN 2 (NEW SECTIONS) -->
             <div class="footer-links-column">
                 <h4>Campus Portals</h4>
                 <ul class="footer-nav-list">
@@ -104,7 +101,6 @@
                 </ul>
             </div>
         </div>
-        <!-- LOWER COPYRIGHT SECURITY DEPLOYMENT TRACK -->
         <div class="footer-terminal-bar">
             <div class="section-container terminal-bar-flex">
                 <p>&copy; 2026 EduManage Core Academy. Central Systems Audited Configuration.</p>
