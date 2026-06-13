@@ -176,14 +176,6 @@ body {
 /* ==========================================================================
    🚀 HERO SECTION INTERACTIVE LINK BUTTON STYLES
    ========================================================================== */
-
-.hero-actions-row {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-}
-
 /* Base properties shared by both button blocks */
 .hero-actions-row .btn-primary,
 .hero-actions-row .btn-secondary {
