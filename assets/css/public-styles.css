@@ -19,11 +19,6 @@
     --pub-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05);
 }
 
-/* 
-   NOTE: The '@media (prefers-color-scheme: dark)' code block has been 
-   removed to enforce a consistent Light UI across all operating frameworks.
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -111,53 +106,194 @@ body {
     background-color: var(--pub-theme-accent);
 }
 
-/* --- HERO CORE BANNER --- */
+/* ==========================================================================
+   💥 ADVANCED CENTERED HERO AREA PRESENTATION BLUEPRINTS
+   ========================================================================== */
+
 .hero-showcase-section {
-    background: radial-gradient(circle at 80% 20%, var(--pub-bg-alt) 0%, var(--pub-bg-canvas) 100%);
-    padding: 100px 0;
+    background-color: var(--pub-bg-canvas);
+    /* Enforces crisp white base */
+    padding: 120px 0;
     border-bottom: 1px solid var(--pub-border);
+    overflow: hidden;
 }
 
-.hero-content-wrapper {
-    max-width: 800px;
+/* Unified column structural stack aligned centrally along screen canvas */
+.hero-split-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Central Content Column Configuration */
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers text strings, taglines, and buttons row */
+    text-align: center;
 }
 
 .hero-tagline {
     color: var(--pub-theme-accent);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
 }
 
-.hero-content-wrapper h1 {
-    font-size: 3rem;
+.hero-text-block h1 {
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--pub-text-prime);
     letter-spacing: -1.5px;
-    line-height: 1.15;
-    margin: 16px 0;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 800px;
 }
 
-.hero-content-wrapper p {
+.hero-text-block p {
     font-size: 1.15rem;
     color: var(--pub-text-second);
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 640px;
+    /* Constrains column width to keep text lines readable */
 }
 
-.btn-primary {
+.hero-actions-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   🚀 HERO SECTION INTERACTIVE LINK BUTTON STYLES
+   ========================================================================== */
+
+.hero-actions-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base properties shared by both button blocks */
+.hero-actions-row .btn-primary,
+.hero-actions-row .btn-secondary {
+    display: inline-block;
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 8px;
-    font-weight: 600;
-    background-color: var(--pub-theme-blue);
-    color: #ffffff;
-    display: inline-block;
-    transition: background-color 0.2s;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.1px;
+    white-space: nowrap;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.1s ease;
+    cursor: pointer;
 }
 
-.btn-primary:hover {
+/* 🥇 THE PRIMARY ACTION CTA: Solid Institutional Accent */
+.hero-actions-row .btn-primary {
+    background-color: var(--pub-theme-blue);
+    /* Deep crisp blue */
+    color: #ffffff;
+    border: 1px solid var(--pub-theme-blue);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+}
+
+.hero-actions-row .btn-primary:hover {
     background-color: var(--pub-theme-accent);
+    /* Vibrant neon blue on hover */
+    border-color: var(--pub-theme-accent);
+}
+
+/* 🥈 THE SECONDARY ACTION CTA: Clean Structured Border Outline */
+.hero-actions-row .btn-secondary {
+    background-color: transparent;
+    color: var(--pub-text-prime);
+    /* High-contrast text color token */
+    border: 1px solid var(--pub-border);
+}
+
+.hero-actions-row .btn-secondary:hover {
+    background-color: var(--pub-bg-alt);
+    /* Soft slate gray fill tint on hover */
+    border-color: var(--pub-text-muted-gray);
+}
+
+/* Click micro-interaction responsive feedback state */
+.hero-actions-row .btn-primary:active,
+.hero-actions-row .btn-secondary:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   📶 RESPONSIVE MOBILE FORM SCALE ADJUSTMENTS
+   ========================================================================== */
+@media screen and (max-width: 550px) {
+    .hero-actions-row {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 24px;
+        gap: 12px;
+    }
+
+    .hero-actions-row .btn-primary,
+    .hero-actions-row .btn-secondary {
+        width: 100%;
+        /* Stacks links vertically and spans full smartphone device widths */
+    }
+}
+
+/* Centered Visual Blueprint Grid Mesh Box Configuration */
+.hero-visual-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   📶 HERO RESPONSIVE COMPACTION MEDIA RULES
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+    .hero-showcase-section {
+        padding: 80px 0;
+    }
+
+    .hero-text-block h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero-actions-row {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .blueprint-canvas-card {
+        height: 220px;
+    }
 }
 
 /* --- LAYOUT GRIDS & CARDS --- */
