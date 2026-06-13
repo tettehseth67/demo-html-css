@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Finance &amp; Fee Ledger</title>
+    <!-- Linking both the shared global styles and new layout mechanics -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/finance-styles.css">
+</head>
+
+<body>
+
+    <!-- APP SIDEBAR NAVIGATION RAIL (Matches index.html) -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Hub</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="dashboard.html">📊 System Overview</a></li>
+                <li class="nav-link-item"><a href="attendance.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item"><a href="faculty.html">👩‍🏫 Faculty Rosters</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item active"><a href="finance.html">💳 Fee Ledgers</a></li>
+                <li class="nav-link-item"><a href="settings.html">⚙️ Global Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA VIEWPORT -->
+    <main class="primary-workspace-engine">
+
+        <!-- UTILITY HEADER BAR -->
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Search invoice numbers, student IDs, transactions...">
+            </div>
+            <div class="operator-profile-card">
+
+                <span class="profile-name">Root Admin</span>
+                <span class="profile-role">Billing Department</span>
+            </div>
+            <div class="avatar-fallback-frame">RA</div>
+            </div>
+        </header>
+
+        <!-- DATA PANELS WRAPPER -->
+        <div class="viewport-data-container">
+            <header class="view-intro-title">
+                <h1>Finance &amp; Tuition Ledgers</h1>
+                <p>Monitor collections, update invoices, and track outstanding balances.</p>
+            </header>
+
+            <!-- REVENUE ANALYTICS GRID -->
+            <section class="metrics-grid-layout">
+                <div class="analytical-metric-card core-total">
+                    <span class="metric-card-label">Total Invoiced (Term)</span>
+                    <div class="metric-card-value">$428,500</div>
+                </div>
+                <div class="analytical-metric-card core-collected">
+                    <span class="metric-card-label">Collected Revenue</span>
+                    <div class="metric-card-value">$392,100</div>
+                </div>
+                <div class="analytical-metric-card core-pending">
+                    <span class="metric-card-label">Outstanding Balances</span>
+                    <div class="metric-card-value">$36,400</div>
+                </div>
+            </section>
+
+            <!-- FINANCE WORKFLOW SPLIT LAYOUT -->
+            <div class="operational-split-grid finance-layout-override">
+
+                <!-- PRIMARY TRANSACTION LOG PANEL -->
+                <section class="data-table-panel-card">
+                    <div class="panel-card-header table-actions">
+                        <h2>Recent Invoices &amp; Receipts</h2>
+                    </div>
+                    <table class="registry-data-table">
+                        <thead>
+                            <tr>
+                                <th>Invoice ID</th>
+                                <th>Student Identity</th>
+                                <th>Billing Component</th>
+                                <th>Amount</th>
+                                <th>Collection Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#INV-2026-089</td>
+                                <td>Marcus Sterling</td>
+                                <td>Tuition Fee (Q2)</td>
+                                <td><strong>$2,400.00</strong></td>
+                                <td><span class="finance-badge status-paid">Settled</span></td>
+                            </tr>
+                            <tr>
+                                <td>#INV-2026-090</td>
+                                <td>Clara Oswald</td>
+                                <td>Laboratory Resource Fee</td>
+                                <td><strong>$350.00</strong></td>
+                                <td><span class="finance-badge status-paid">Settled</span></td>
+                            </tr>
+                            <tr>
+                                <td>#INV-2026-091</td>
+                                <td>Liam Henderson</td>
+                                <td>Tuition Fee (Q2)</td>
+                                <td><strong>$2,400.00</strong></td>
+                                <td><span class="finance-badge status-overdue">Overdue</span></td>
+                            </tr>
+                            <tr>
+                                <td>#INV-2026-092</td>
+                                <td>Sophia Lin</td>
+                                <td>Transportation Pass</td>
+                                <td><strong>$180.00</strong></td>
+                                <td><span class="finance-badge status-unpaid">Unpaid / Draft</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- NEW TRANSACTION DISBURSEMENT ENTRY PANEL -->
+                <section class="summary-notices-panel-card entry-form-card">
+                    <div class="panel-card-header">
+                        <h2>Post New Invoice Entry</h2>
+                    </div>
+                    <form onsubmit="return false;" class="billing-form-wrapper">
+                        <div class="billing-input-group">
+                            <label>Target Student Reference ID</label>
+                            <input type="text" placeholder="e.g., #SIS-8841">
+                        </div>
+                        <div class="billing-input-group">
+                            <label>Fee Classification Group</label>
+                            <select>
+                                <option>Standard Tuition Tier A</option>
+                                <option>Standard Tuition Tier B</option>
+                                <option>Extracurricular &amp; Sports Fee</option>
+                                <option>Course Materials &amp; Print Books</option>
+                            </select>
+                        </div>
+                        <div class="billing-input-group">
+                            <label>Exact Cost Allocation (USD)</label>
+                            <input type="number" placeholder="0.00">
+                        </div>
+                        <button class="disburse-btn">Post Invoice to Ledger</button>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

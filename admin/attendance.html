@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Student Directory</title>
+    <!-- Connecting the shared global layout stylesheet configuration -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- PRIMARY GLOBAL SIDEBAR NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Admin</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="index.html">📊 Admin Overview</a></li>
+                <li class="nav-link-item active"><a href="attendance.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item"><a href="faculty.html">👩‍🏫 Faculty Rosters</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item"><a href="finance.html">💳 Fee Ledgers</a></li>
+                <li class="nav-link-item"><a href="settings.html">⚙️ Portal Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA WORKSPACE ENGINE -->
+    <main class="primary-workspace-engine">
+
+        <!-- SYSTEM NAVIGATION UTILITY NAVBAR -->
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Search student roster names, IDs, cohort blocks...">
+            </div>
+
+            <div class="operator-profile-card">
+
+
+                <span class="profile-name">Root Admin</span>
+                <span class="profile-role">Homeroom Portal</span>
+            </div>
+            <div class="avatar-fallback-frame">RA</div>
+            </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD CONTAINER VIEWPORT -->
+        <div class="viewport-data-container">
+            <header class="view-intro-title split-title-row">
+                <div>
+                    <h1>Student Directory &amp; Attendance</h1>
+                    <p>Mark daily class presence, track enrollment distributions, and manage cohort lists.</p>
+                </div>
+                <!-- Selection dropdown utility aligned cleanly in the layout header -->
+                <div class="header-action-dropdown">
+                    <select class="cohort-select-dropdown">
+                        <option>Grade 10 Senior Block - A</option>
+                        <option>Grade 10 Senior Block - B</option>
+                        <option>Grade 09 Junior Block - A</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- COHORT STATISTICS METRICS SYSTEM -->
+            <section class="metrics-grid-layout">
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Total Active Enrolled</span>
+                    <div class="metric-card-value">1,540</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Present Today</span>
+                    <div class="metric-card-value">1,492</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Excused Absences</span>
+                    <div class="metric-card-value">34</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Unexcused Absences</span>
+                    <div class="metric-card-value text-alert-red">14</div>
+                </div>
+            </section>
+
+            <!-- FULL-WIDTH MASTER DATA PANELS -->
+            <div class="full-width-panel-stack">
+
+                <section class="data-table-panel-card">
+                    <div class="panel-card-header table-header-flex">
+                        <h2>Daily Attendance Tracking Sheet</h2>
+                        <button type="button" class="commit-sheet-btn">Commit Changes</button>
+                    </div>
+
+                    <table class="registry-data-table attendance-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Roll ID</th>
+                                <th>Student Full Name</th>
+                                <th>Term Rate</th>
+                                <th class="center-align-cell">Present</th>
+                                <th class="center-align-cell">Late</th>
+                                <th class="center-align-cell">Absent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#STU-8841</td>
+                                <td>Evelyn Vance</td>
+                                <td class="attendance-rate-high">98.2%</td>
+                                <td class="center-align-cell"><input type="radio" name="student-1"
+                                        class="custom-radio-input present-radio" checked></td>
+                                <td class="center-align-cell"><input type="radio" name="student-1"
+                                        class="custom-radio-input late-radio"></td>
+                                <td class="center-align-cell"><input type="radio" name="student-1"
+                                        class="custom-radio-input absent-radio"></td>
+                            </tr>
+                            <tr>
+                                <td>#STU-1092</td>
+                                <td>Julian Kael</td>
+                                <td class="attendance-rate-high">96.5%</td>
+                                <td class="center-align-cell"><input type="radio" name="student-2"
+                                        class="custom-radio-input present-radio" checked></td>
+                                <td class="center-align-cell"><input type="radio" name="student-2"
+                                        class="custom-radio-input late-radio"></td>
+                                <td class="center-align-cell"><input type="radio" name="student-2"
+                                        class="custom-radio-input absent-radio"></td>
+                            </tr>
+                            <tr>
+                                <td>#STU-4721</td>
+                                <td>Miriam Locke</td>
+                                <td class="attendance-rate-low">82.1%</td>
+                                <td class="center-align-cell"><input type="radio" name="student-3"
+                                        class="custom-radio-input present-radio"></td>
+                                <td class="center-align-cell"><input type="radio" name="student-3"
+                                        class="custom-radio-input late-radio" checked></td>
+                                <td class="center-align-cell"><input type="radio" name="student-3"
+                                        class="custom-radio-input absent-radio"></td>
+                            </tr>
+                            <tr>
+                                <td>#STU-5510</td>
+                                <td>Marcus Sterling Jr.</td>
+                                <td class="attendance-rate-mid">91.4%</td>
+                                <td class="center-align-cell"><input type="radio" name="student-4"
+                                        class="custom-radio-input present-radio"></td>
+                                <td class="center-align-cell"><input type="radio" name="student-4"
+                                        class="custom-radio-input late-radio"></td>
+                                <td class="center-align-cell"><input type="radio" name="student-4"
+                                        class="custom-radio-input absent-radio" checked></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </div> <!-- / .full-width-panel-stack -->
+        </div> <!-- / .viewport-data-container -->
+    </main>
+
+</body>
+
+</html>

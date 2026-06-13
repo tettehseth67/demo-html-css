@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Core Administrative Dashboard</title>
+    <!-- Master layout style sheets asset link -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- PRIMARY WEB APP NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Hub</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item active"><a href="dashboard.html">📊 System Overview</a></li>
+                <li class="nav-link-item"><a href="attendance.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item"><a href="report-card.html">📜 Report Cards</a></li>
+                <li class="nav-link-item"><a href="faculty.html">👩‍🏫 Faculty Directory</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item"><a href="finance.html">💳 Fee Ledgers</a></li>
+                <li class="nav-link-item"><a href="settings.html">⚙️ Global Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA WORKSPACE ENGINE -->
+    <main class="primary-workspace-engine">
+
+        <!-- SYSTEM CONTROL UTILITY NAVBAR -->
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Search operations, files, indexes...">
+            </div>
+
+            <!-- DROPDOWN BUTTON WRAPPER -->
+            <div class="operator-profile-card">
+
+
+                <span class="profile-name">Root Admin</span>
+                <span class="profile-role">System Auditor</span>
+            </div>
+            <div class="avatar-fallback-frame">RA</div>
+            </button>
+
+            <!-- DROPDOWN BOX INTERACTIVE MENU -->
+            <div class="profile-dropdown-menu" id="profileMenu">
+                <div class="dropdown-menu-header">
+                    <h4>Account Controls</h4>
+                </div>
+                <ul class="modal-links-list">
+                    <li><a href="settings.html">👤 Edit Profile Settings</a></li>
+                    <li><a href="login.html" class="logout-link">🚪 Terminate Session</a></li>
+                </ul>
+            </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD DATA CONTAINMENT VIEWPORT -->
+        <div class="viewport-data-container">
+            <header class="view-intro-title">
+                <h1>Administrative Overview</h1>
+                <p>Real-time analytics and management controls for current operations.</p>
+            </header>
+
+            <!-- STATISTICAL ANALYTICS HIGHLIGHTS -->
+            <section class="metrics-grid-layout">
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Total Enrollment</span>
+                    <div class="metric-card-value">1,540</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Verified Faculty Staff</span>
+                    <div class="metric-card-value">112</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Room Allocation Metrics</span>
+                    <div class="metric-card-value">98.4%</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Pending Clearances</span>
+                    <div class="metric-card-value">14</div>
+                </div>
+            </section>
+
+            <!-- SPLIT OPERATIONAL DASHBOARD LAYOUT -->
+            <div class="operational-split-grid">
+
+                <!-- PRIMARY LIVE LOG REGISTRY -->
+                <section class="data-table-panel-card">
+                    <div class="panel-card-header">
+                        <h2>Recent Admission Records</h2>
+                    </div>
+                    <table class="registry-data-table">
+                        <thead>
+                            <tr>
+                                <th>Registry Code</th>
+                                <th>Student Identity</th>
+                                <th>Assigned Block</th>
+                                <th>Clearance Check</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#SIS-8841</td>
+                                <td>Evelyn Vance</td>
+                                <td>Grade 10 Senior Block</td>
+                                <td><span class="verification-badge status-passed">Cleared</span></td>
+                            </tr>
+                            <tr>
+                                <td>#SIS-1092</td>
+                                <td>Julian Kael</td>
+                                <td>Grade 12 Senior Block</td>
+                                <td><span class="verification-badge status-passed">Cleared</span></td>
+                            </tr>
+                            <tr>
+                                <td>#SIS-4721</td>
+                                <td>Miriam Locke</td>
+                                <td>Grade 09 Junior Block</td>
+                                <td><span class="verification-badge status-review">Awaiting Check</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- INSTANT INFORMATION SUMMARY PANEL -->
+                <section class="summary-notices-panel-card">
+                    <div class="panel-card-header">
+                        <h2>Operational Broadcasts</h2>
+                    </div>
+                    <ul class="bulletin-board-list">
+                        <li class="bulletin-board-item">
+                            <span class="item-title">System Update Completed</span>
+                            <span class="item-meta">Database indexing protocols updated.</span>
+                        </li>
+                        <li class="bulletin-board-item">
+                            <span class="item-title">Term Grade Submission Open</span>
+                            <span class="item-meta">Faculty portals unlocked for semester entries.</span>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- INTERACTION LOGIC ENGINES (DROP-DOWN MANAGER) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownBtn = document.getElementById('profileDropdownBtn');
+            const profileMenu = document.getElementById('profileMenu');
+
+            if (dropdownBtn && profileMenu) {
+                // Toggle display classes when clicking the profile wrapper button
+                dropdownBtn.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevents close-on-click event bubbling
+                    profileMenu.classList.toggle('is-active');
+                });
+
+                // Auto-close dropdown menu panel if clicking outside on the window body
+                window.addEventListener('click', () => {
+                    if (profileMenu.classList.contains('is-active')) {
+                        profileMenu.classList.remove('is-active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+/* --- ATTENDANCE SYSTEM CUSTOM OVERRIDES --- */
+
+.attendance-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.control-dropdown {
+    padding: 10px 16px;
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    background-color: var(--surface-bg);
+    color: var(--text-primary);
+    font-weight: 600;
+    outline: none;
+}
+
+.full-span-override {
+    width: 100%;
+}
+
+.centered-cell {
+    text-align: center !important;
+}
+
+/* Tracking Rate Colors */
+.rate-high {
+    color: #10b981;
+}
+
+.rate-mid {
+    color: #f59e0b;
+}
+
+.rate-low {
+    color: #ef4444;
+}
+
+/* Custom Action Inputs Layout */
+.att-radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-muted-gray);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.2s;
+}
+
+.present-check:checked {
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+.late-check:checked {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+}
+
+.absent-check:checked {
+    background-color: #ef4444;
+    border-color: #ef4444;
+}
+
+.table-save-action-bar {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-records-btn {
+    background-color: var(--interactive-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-records-btn:hover {
+    background-color: var(--interactive-hover);
+}
+

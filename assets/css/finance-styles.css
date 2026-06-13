@@ -1,0 +1,116 @@
+/* --- EXTENSION DESIGN CONFIGURATIONS FOR FINANCE PORTAL --- */
+
+/* Highlight Specific Metrics Cards */
+.analytical-metric-card.core-total {
+    border-top: 4px solid var(--interactive-blue);
+}
+
+.analytical-metric-card.core-collected {
+    border-top: 4px solid #10b981;
+    /* Success Green */
+}
+
+.analytical-metric-card.core-pending {
+    border-top: 4px solid #ef4444;
+    /* Alert Red */
+}
+
+/* Adjust table row typography spacing for balances */
+.registry-data-table td strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Financial Status Badges */
+.finance-badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.finance-badge.status-paid {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.finance-badge.status-overdue {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.finance-badge.status-unpaid {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* Billing Form Formatting Components */
+.entry-form-card {
+    background-color: var(--surface-bg);
+}
+
+.billing-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.billing-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.billing-input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.billing-input-group input,
+.billing-input-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.billing-input-group input:focus,
+.billing-input-group select:focus {
+    border-color: var(--interactive-blue);
+}
+
+/* Action CTA Form Button */
+.disburse-btn {
+    background-color: var(--interactive-blue);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.disburse-btn:hover {
+    background-color: var(--interactive-hover);
+}
+
+/* Adjust grid layout proportions slightly for clean forms alignment */
+@media (min-width: 1200px) {
+    .operational-split-grid.finance-layout-override {
+        grid-template-columns: 1fr 360px;
+    }
+}

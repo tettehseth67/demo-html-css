@@ -1,0 +1,135 @@
+/* --- CONFIGURATION PORTAL STYLESHEET DECOR --- */
+
+.settings-layout-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.settings-form-panel {
+    background-color: var(--surface-bg);
+    border: 1px solid var(--border-structural);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    padding: 24px;
+}
+
+.section-panel-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border-structural);
+    padding-bottom: 12px;
+}
+
+.settings-grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.settings-group input[type="text"],
+.settings-group input[type="email"],
+.settings-group input[type="password"],
+.settings-group select {
+    padding: 10px 14px;
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    color: var(--text-primary);
+    background-color: #ffffff;
+}
+
+.settings-group input:focus,
+.settings-group select:focus {
+    border-color: var(--interactive-blue);
+}
+
+/* Special Toggle Field Formatting */
+.spec-toggle-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.toggle-checkbox {
+    width: 44px;
+    height: 24px;
+    appearance: none;
+    background-color: #cbd5e1;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.toggle-checkbox:checked {
+    background-color: var(--interactive-blue);
+}
+
+.toggle-checkbox::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.2s;
+}
+
+.toggle-checkbox:checked::before {
+    transform: translateX(20px);
+}
+
+/* Global Forms Save System Blocks */
+.global-actions-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    border-top: 1px solid var(--border-structural);
+    padding-top: 24px;
+}
+
+.dismiss-btn {
+    background: none;
+    border: 1px solid var(--border-structural);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.commit-settings-btn {
+    background-color: var(--interactive-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.commit-settings-btn:hover {
+    background-color: var(--interactive-hover);
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Resources | EduManage Academy</title>
+    <!-- Connecting the shared global layout stylesheet configuration -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/public-styles.css">
+</head>
+
+<body>
+
+    <!-- GLOBAL SITE NAVIGATION HEADER -->
+    <header class="public-site-header">
+        <div class="header-container">
+            <a href="index.html" class="site-logo">🏫 EduManage Academy</a>
+            <nav class="public-nav">
+                <ul class="public-nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions Intake</a></li>
+                    <li class="active"><a href="resources.html">Parent Resources</a></li>
+                </ul>
+            </nav>
+            <a href="../admin/login.html" class="portal-cta-btn">System Portal Login</a>
+        </div>
+    </header>
+
+    <!-- MAIN EXPLICIT WORKSPACE CONTENT -->
+    <main class="main-wrapper page-interior-padding">
+        <div class="section-container">
+
+            <header class="section-title-header">
+                <h1>Parent Resource Directory</h1>
+                <p>Access essential documents, download structural guides, and compute academic grade assignments for
+                    your children.</p>
+            </header>
+
+            <!-- SPLIT GRAPHICAL INFORMATION GRID -->
+            <div class="operational-split-grid"
+                style="display: grid; grid-template-columns: 2fr 1fr; gap: 32px; align-items: start;">
+
+                <!-- COLUMN A: DOCUMENT TRACK LINKS & GRIDS -->
+                <div class="resource-documents-stack" style="display: flex; flex-direction: column; gap: 24px;">
+
+                    <section class="division-card" style="padding: 30px;">
+                        <h3>📥 Institutional Downloads &amp; Handbooks</h3>
+                        <p style="margin: 10px 0 20px 0; font-size: 0.95rem; color: var(--pub-text-second);">Review the
+                            official regulatory guidelines and code books for the active academic season.</p>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                            <li><a href="#"
+                                    style="color: var(--pub-theme-accent); text-decoration: none; font-weight: 600;">📄
+                                    2026-2027 Student &amp; Parent Handbook (PDF)</a></li>
+                            <li><a href="#"
+                                    style="color: var(--pub-theme-accent); text-decoration: none; font-weight: 600;">📅
+                                    Official Academic Master Calendar Sheet (PDF)</a></li>
+                            <li><a href="#"
+                                    style="color: var(--pub-theme-accent); text-decoration: none; font-weight: 600;">👕
+                                    Dress Code &amp; Uniform Procurement Grid (PDF)</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="division-card" style="padding: 30px;">
+                        <h3>📞 Support &amp; Communication Channels</h3>
+                        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--pub-text-second);">Our
+                            administrative help desk tracks responses sequentially inside operational business hours.
+                        </p>
+                        <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <strong
+                                    style="font-size: 0.85rem; text-transform: uppercase; color: var(--pub-text-second);">Registrar
+                                    Office</strong>
+                                <p style="font-size: 0.95rem; font-weight: 600; margin-top: 4px;">
+                                    registrar@edumanagecore.edu</p>
+                            </div>
+                            <div>
+                                <strong
+                                    style="font-size: 0.85rem; text-transform: uppercase; color: var(--pub-text-second);">Billing
+                                    Department</strong>
+                                <p style="font-size: 0.95rem; font-weight: 600; margin-top: 4px;">
+                                    finance@edumanagecore.edu</p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- COLUMN B: INTERACTIVE MATHEMATICAL PLACEMENT CALCULATOR -->
+                <section class="compact-form-card" style="margin-top: 0; width: 100%;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--pub-text-prime);">Grade Placement
+                        Tool</h3>
+                    <p style="font-size: 0.85rem; color: var(--pub-text-second); margin-bottom: 20px;">Input your
+                        child's age to compute their standard target cohort allocation class.</p>
+
+                    <form id="placementCalcForm" onsubmit="return false;">
+                        <div class="public-form-group">
+                            <label>Child's Current Age (Years)</label>
+                            <input type="number" id="childAgeInput" min="4" max="19" placeholder="e.g., 14" required>
+                        </div>
+                        <button type="submit" class="public-submit-btn">Compute Grade Placement</button>
+                    </form>
+
+                    <!-- CALCULATOR OUTPUT NOTICE FRAME (Hidden until evaluated) -->
+                    <div id="calculatorResultBox"
+                        style="display: none; margin-top: 20px; padding: 16px; border-radius: 8px; background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a;">
+                        <span
+                            style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">Recommended
+                            Target:</span>
+                        <strong id="targetPlacementOutput"
+                            style="font-size: 1.2rem; display: block; margin-bottom: 6px;">Grade 9 Junior Block</strong>
+                        <p style="font-size: 0.8rem; line-height: 1.4; color: #1e40af;">Placement is computed assuming a
+                            baseline age cutoff framework by standard enrollment parameters.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- GLOBAL SITE FOOTER -->
+    <footer class="public-site-footer">
+        <div class="section-container footer-layout-grid">
+            <!-- BRAND HUB COLUMN -->
+            <div class="footer-brand-column">
+                <span class="footer-logo">🏫 EduManage Academy</span>
+                <p class="footer-brand-bio">Centralized architectural learning environments delivering rigorous, modern
+                    academic tracks for upcoming global scholars.</p>
+            </div>
+            <!-- PUBLIC LINK MATRIX COLUMN 1 -->
+            <div class="footer-links-column">
+                <h4>Academic Registry</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="academics.html">Academic Divisions</a></li>
+                    <li><a href="admissions.html">Admissions Intake</a></li>
+                    <li><a href="resources.html">Parent Resources</a></li>
+                </ul>
+            </div>
+            <!-- PUBLIC LINK MATRIX COLUMN 2 (NEW SECTIONS) -->
+            <div class="footer-links-column">
+                <h4>Campus Portals</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="news.html">Campus News Feed</a></li>
+                    <li><a href="student-life.html">Student Life &amp; Athletics</a></li>
+                    <li><a href="careers.html">Join Our Faculty</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- LOWER COPYRIGHT SECURITY DEPLOYMENT TRACK -->
+        <div class="footer-terminal-bar">
+            <div class="section-container terminal-bar-flex">
+                <p>&copy; 2026 EduManage Core Academy. Central Systems Audited Configuration.</p>
+                <p>Administrative Node Location: Delaware, USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ⚡ CALCULATOR ALIGNMENT CONTROLLER SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calcForm = document.getElementById('placementCalcForm');
+            const ageInput = document.getElementById('childAgeInput');
+            const resultBox = document.getElementById('calculatorResultBox');
+            const outputText = document.getElementById('targetPlacementOutput');
+
+            if (calcForm && ageInput && resultBox && outputText) {
+                calcForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const age = parseInt(ageInput.value, 10);
+                    let placementResult = "";
+
+                    // Simple age-to-grade matching algorithm metrics
+                    if (age >= 14 && age <= 15) {
+                        placementResult = "Grade 9 Junior Block";
+                    } else if (age === 16) {
+                        placementResult = "Grade 10 Junior Block";
+                    } else if (age === 17) {
+                        placementResult = "Grade 11 Senior Block";
+                    } else if (age >= 18) {
+                        placementResult = "Grade 12 Senior Block";
+                    } else {
+                        placementResult = "Early Childhood / Prep Track";
+                    }
+
+                    // Render dynamic text payload block to viewport canvas elements
+                    outputText.textContent = placementResult;
+                    resultBox.style.display = 'block';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

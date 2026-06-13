@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Faculty Roster</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+    <!-- PRIMARY WEB APP NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Hub</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="dashboard.html">📊 System Overview</a></li>
+                <li class="nav-link-item"><a href="attendance.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item active"><a href="faculty.html">👩‍🏫 Faculty Rosters</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item"><a href="finance.html">💳 Fee Ledgers</a></li>
+                <li class="nav-link-item"><a href="settings.html">⚙️ Global Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA WORKSPACE ENGINE -->
+    <main class="primary-workspace-engine">
+        
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Search faculty identities, staff IDs, departments...">
+            </div>
+            <div class="operator-profile-card">
+                
+                    
+                        <span class="profile-name">Root Admin</span>
+                        <span class="profile-role">Human Resources</span>
+                    </div>
+                    <div class="avatar-fallback-frame">RA</div>
+                </button>
+                <div class="profile-dropdown-menu" id="profileMenu">
+                    <div class="dropdown-menu-header">
+                        <h4>Account Controls</h4>
+                    </div>
+                    <ul class="modal-links-list">
+                        <li><a href="settings.html">👤 Edit Profile Settings</a></li>
+                        <li><a href="login.html" class="logout-link">🚪 Terminate Session</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="viewport-data-container">
+            <header class="view-intro-title">
+                <h1>Faculty Personnel Registry</h1>
+                <p>Track academic workloads, verify operational contracts, and onboard new staff entries.</p>
+            </header>
+
+            <section class="metrics-grid-layout">
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Active Staff Members</span>
+                    <div class="metric-card-value" id="globalStaffCounter">112</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Natural Sciences Dept</span>
+                    <div class="metric-card-value">28</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Full-Time Allocations</span>
+                    <div class="metric-card-value">94</div>
+                </div>
+                <div class="analytical-metric-card">
+                    <span class="metric-card-label">Vacant Postures</span>
+                    <div class="metric-card-value">6</div>
+                </div>
+            </section>
+
+            <div class="operational-split-grid">
+                
+                <section class="data-table-panel-card">
+                    <div class="panel-card-header">
+                        <h2>Master Personnel Directory</h2>
+                    </div>
+                    <table class="registry-data-table">
+                        <thead>
+                            <tr>
+                                <th>Staff ID</th>
+                                <th>Faculty Identity</th>
+                                <th>Department Assignment</th>
+                                <th>Workload Allocation</th>
+                                <th class="action-header-cell">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#FAC-4401</td>
+                                <td>Dr. Aris Thorne</td>
+                                <td>Natural Sciences</td>
+                                <td><span class="verification-badge status-passed">Full-Time</span></td>
+                                <td class="action-data-cell"><button class="delete-entry-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>#FAC-1298</td>
+                                <td>Prof. Clara Vance</td>
+                                <td>Mathematics &amp; Data</td>
+                                <td><span class="verification-badge status-passed">Full-Time</span></td>
+                                <td class="action-data-cell"><button class="delete-entry-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>#FAC-7721</td>
+                                <td>Marcus Sterling</td>
+                                <td>Humanities &amp; Arts</td>
+                                <td><span class="verification-badge status-review">Adjunct</span></td>
+                                <td class="action-data-cell"><button class="delete-entry-btn">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="summary-notices-panel-card faculty-form-card">
+                    <div class="panel-card-header">
+                        <h2>Onboard New Faculty Entry</h2>
+                    </div>
+                    <form onsubmit="return false;" class="faculty-form">
+                        <div class="faculty-form-group">
+                            <label>Legal Full Name</label>
+                            <input type="text" placeholder="e.g., Prof. Alan Turing">
+                        </div>
+                        <div class="faculty-form-group">
+                            <label>Department Designation</label>
+                            <select>
+                                <option>Natural Sciences</option>
+                                <option>Mathematics &amp; Data</option>
+                                <option>Humanities &amp; Arts</option>
+                                <option>Languages &amp; Literature</option>
+                            </select>
+                        </div>
+                        <div class="faculty-form-group">
+                            <label>Staff ID Allocation Tag</label>
+                            <input type="text" placeholder="e.g., #FAC-9000">
+                        </div>
+                        <button type="submit" class="faculty-submit-btn">Commit Personnel Entry</button>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FUNCTIONAL INTERACTIVE LOGIC ENGINES -->
+    <!-- ==========================================================================
+       ⚡ APPLICATION LOGIC CONTROLLER SYSTEM
+       ========================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. CORE APPLICATION NODE REGISTRY ---
+            const dropdownBtn = document.getElementById('profileDropdownBtn');
+            const profileMenu = document.getElementById('profileMenu');
+            const searchBar = document.querySelector('.search-input-capsule input');
+            const facultyForm = document.querySelector('.faculty-form');
+            const tableBody = document.querySelector('.registry-data-table tbody');
+            const globalStaffCounter = document.getElementById('globalStaffCounter');
+
+            // --- 2. OPERATOR PROFILE DROPDOWN MANAGER ---
+            if (dropdownBtn && profileMenu) {
+                dropdownBtn.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Stop the event from bubbling and closing the menu instantly
+                    profileMenu.classList.toggle('is-active');
+                });
+
+                // Automatically close the menu if the operator clicks away on the canvas layout
+                window.addEventListener('click', () => {
+                    if (profileMenu.classList.contains('is-active')) {
+                        profileMenu.classList.remove('is-active');
+                    }
+                });
+            }
+
+            // --- 3. REAL-TIME DATA SHEET DIRECTORY FILTER ---
+            function filterTableRows() {
+                if (!searchBar || !tableBody) return;
+
+                const rows = tableBody.querySelectorAll('tr');
+                const searchString = searchBar.value.toLowerCase().trim();
+
+                rows.forEach((row) => {
+                    // Convert full row row mapping context into string match array
+                    const rowContentText = row.textContent.toLowerCase();
+
+                    if (rowContentText.includes(searchString)) {
+                        row.style.display = ''; // Match verified: retain row positioning
+                    } else {
+                        row.style.display = 'none'; // Mismatch verified: safely hide from viewport
+                    }
+                });
+            }
+
+            if (searchBar) {
+                searchBar.addEventListener('input', filterTableRows);
+            }
+
+            // --- 4. CENTRALANALYTICS COUNTER MONITOR UTILITY ---
+            function updateGlobalStaffMetrics(adjustmentValue) {
+                if (globalStaffCounter) {
+                    let currentCount = parseInt(globalStaffCounter.textContent, 10);
+                    // Fail-safe validation schema adjustment guard
+                    if (isNaN(currentCount)) currentCount = 0;
+                    globalStaffCounter.textContent = currentCount + adjustmentValue;
+                }
+            }
+
+            // --- 5. DATA SHEET ROW REMOVAL ENGINE (EVENT DELEGATION) ---
+            if (tableBody) {
+                tableBody.addEventListener('click', (event) => {
+                    // Verify the user clicked a valid deletion element target safely
+                    if (event.target.classList.contains('delete-entry-btn')) {
+                        const targetRow = event.target.closest('tr');
+
+                        // Native operating framework confirmation alert gateway check
+                        const confirmDeletion = confirm("System Registry Notice: Are you certain you want to erase this personnel data row record?");
+
+                        if (confirmDeletion && targetRow) {
+                            targetRow.remove(); // Safely drop element segment out of the page DOM layout tree
+                            updateGlobalStaffMetrics(-1); // Decrease the statistics count balance by 1
+                        }
+                    }
+                });
+            }
+
+            // --- 6. REGISTRATION GATEWAY: FORM SUBMIT DATA APPEND ---
+            if (facultyForm && tableBody) {
+                facultyForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Stop form from triggering a hard page update flash loop
+
+                    // Select form item value objects
+                    const nameInput = facultyForm.querySelector('input[type="text"]:nth-of-type(1)');
+                    const deptSelect = facultyForm.querySelector('select');
+                    const idInput = facultyForm.querySelector('input[type="text"]:nth-of-type(2)');
+
+                    // Explicit text submission layout validation check
+                    if (!nameInput.value.trim() || !idInput.value.trim()) {
+                        alert('Operational Registry Error: All data fields must be populated.');
+                        return;
+                    }
+
+                    // Create clean table row elements
+                    const newRow = document.createElement('tr');
+
+                    // Map clean cells parameters inside the row wrapper structure
+                    newRow.innerHTML = `
+                        <td>${idInput.value.trim().toUpperCase()}</td>
+                        <td>${nameInput.value.trim()}</td>
+                        <td>${deptSelect.value}</td>
+                        <td><span class="verification-badge status-passed">Full-Time</span></td>
+                        <td class="action-data-cell"><button class="delete-entry-btn">Delete</button></td>
+                    `;
+
+                    // Push row to table, bump the analytics block metrics, reset input fields
+                    tableBody.appendChild(newRow);
+                    updateGlobalStaffMetrics(1); // Increase the statistics count balance by 1
+                    facultyForm.reset();
+                    filterTableRows(); // Re-sync filtering settings in case search text is active
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>

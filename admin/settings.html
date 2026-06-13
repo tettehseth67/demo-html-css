@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Global Configuration</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/settings.css">
+</head>
+
+<body>
+
+    <!-- APP SIDEBAR NAVIGATION RAIL -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Hub</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="dashboard.html">📊 System Overview</a></li>
+                <li class="nav-link-item"><a href="attendance.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item"><a href="faculty.html">👩‍🏫 Faculty Rosters</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item"><a href="finance.html">💳 Fee Ledgers</a></li>
+                <li class="nav-link-item mercantile-override active"><a href="settings.html">⚙️ Global Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA VIEWPORT -->
+    <main class="primary-workspace-engine">
+        <header class="utility-navbar-top">
+            <h2>System Global Settings</h2>
+            <div>Node Version Pro V4.2</div>
+        </header>
+
+        <div class="viewport-data-container">
+            <div class="settings-layout-stack">
+
+                <!-- SECTION 1: INSTITUTION PROFILE -->
+                <section class="settings-form-panel">
+                    <h2 class="section-panel-title">Institution Profile Parameters</h2>
+                    <form onsubmit="return false;" class="settings-grid-form">
+                        <div class="settings-group">
+                            <label>Official Institutional Identity</label>
+                            <input type="text" value="EduManage Core Academy">
+                        </div>
+                        <div class="settings-group">
+                            <label>Administrative Registry Email</label>
+                            <input type="email" value="admin@edumanagecore.edu">
+                        </div>
+                        <div class="settings-group">
+                            <label>Active Term Registration Session</label>
+                            <select>
+                                <option selected>Fall Term Semester 2026</option>
+                                <option>Spring Term Semester 2027</option>
+                            </select>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- SECTION 2: ACCESS & SECURITY CONTROLS -->
+                <section class="settings-form-panel">
+                    <h2 class="section-panel-title">Root Gateways Security Pass</h2>
+                    <form onsubmit="return false;" class="settings-grid-form">
+                        <div class="settings-group">
+                            <label>Update Gateway Key Code</label>
+                            <input type="password" placeholder="••••••••••••">
+                        </div>
+                        <div class="settings-group">
+                            <label>Confirm Gateway Key Code</label>
+                            <input type="password" placeholder="••••••••••••">
+                        </div>
+                        <div class="settings-group spec-toggle-row">
+                            <label>Enforce Multi-Factor Staff Protocols</label>
+                            <input type="checkbox" class="toggle-checkbox" checked>
+                        </div>
+                    </form>
+                </section>
+
+                <div class="global-actions-bar">
+                    <button class="dismiss-btn">Cancel Modifications</button>
+                    <button class="commit-settings-btn">Save Configuration Parameters</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Report Card | EduManage Admin</title>
+    <!-- Linking the external admin dashboard style sheet -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- GLOBAL SIDEBAR NAVIGATION RAIL (Hidden on Print) -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Admin</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="dashboard.html">📊 Admin Overview</a></li>
+                <li class="nav-link-item"><a href="student-roster.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item active"><a href="report-card.html">📜 Report Cards</a></li>
+                <li class="nav-link-item"><a href="faculty.html">👩‍🏫 Faculty Rosters</a></li>
+                <li class="nav-link-item"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item"><a href="finance.html">💳 Fee Ledgers</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA WORKSPACE ENGINE -->
+    <main class="primary-workspace-engine">
+
+        <!-- UTILITY NAVBAR (Hidden on Print) -->
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Print Mode Active — Ctrl+P to Print Layout" disabled>
+            </div>
+            <button type="button" class="commit-sheet-btn" onclick="window.print()">🖨️ Print / Download PDF</button>
+        </header>
+
+        <!-- REPORT CARD CONTAINMENT VIEWPORT -->
+        <div class="viewport-data-container">
+            <div class="report-card-print-frame">
+
+                <!-- REPORT CARD HEADER -->
+                <header class="report-card-header-block">
+                    <div class="report-school-brand">
+                        <h2>EduManage Core Academy</h2>
+                        <p>Office of the Academic Registrar | Official Scholastic Record</p>
+                    </div>
+                    <div class="report-term-badge">
+                        <strong>Academic Term:</strong>
+                        <span>Fall Semester 2026</span>
+                    </div>
+                </header>
+
+                <!-- STUDENT PROFILE DATA BLOCKS -->
+                <section class="student-profile-summary-grid">
+                    <div class="profile-data-cell">
+                        <span class="profile-cell-label">Student Legal Name:</span>
+                        <strong class="profile-cell-value">Evelyn Vance</strong>
+                    </div>
+                    <div class="profile-data-cell">
+                        <span class="profile-cell-label">Student Reference ID:</span>
+                        <strong class="profile-cell-value">#SIS-8841</strong>
+                    </div>
+                    <div class="profile-data-cell">
+                        <span class="profile-cell-label">Assigned Cohort:</span>
+                        <strong class="profile-cell-value">Grade 12 Science Block</strong>
+                    </div>
+                    <div class="profile-data-cell">
+                        <span class="profile-cell-label">Date of Issuance:</span>
+                        <strong class="profile-cell-value">June 12, 2026</strong>
+                    </div>
+                </section>
+
+                <!-- ACADEMIC PERFORMANCE PERFORMANCE SHEET -->
+                <section class="report-card-table-panel">
+                    <table class="report-grades-table">
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Course Title</th>
+                                <th>Instructor</th>
+                                <th class="center-align-text">Grade Mark</th>
+                                <th class="center-align-text">Letter Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SCI-302</td>
+                                <td><strong>Advanced Organic Chemistry</strong></td>
+                                <td>Dr. Aris Thorne</td>
+                                <td class="center-align-text">94 / 100</td>
+                                <td class="center-align-text font-weight-bold">A</td>
+                            </tr>
+                            <tr>
+                                <td>MAT-401</td>
+                                <td><strong>Linear Algebra &amp; Statistics</strong></td>
+                                <td>Prof. Clara Vance</td>
+                                <td class="center-align-text">88 / 100</td>
+                                <td class="center-align-text font-weight-bold">B+</td>
+                            </tr>
+                            <tr>
+                                <td>SCI-405</td>
+                                <td><strong>Embedded Physics &amp; Thermodynamics</strong></td>
+                                <td>Dr. Aris Thorne</td>
+                                <td class="center-align-text">91 / 100</td>
+                                <td class="center-align-text font-weight-bold">A-</td>
+                            </tr>
+                            <tr>
+                                <td>ENG-204</td>
+                                <td><strong>Creative Writing Workshop</strong></td>
+                                <td>Sarah Jenkins</td>
+                                <td class="center-align-text">96 / 100</td>
+                                <td class="center-align-text font-weight-bold">A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- SCORE PERFORMANCE CALCULATOR SHEET -->
+                <footer class="report-card-summary-footer">
+                    <div class="gpa-summary-box">
+                        <span class="gpa-label">Cumulative Term GPA:</span>
+                        <strong class="gpa-value">3.82 / 4.00</strong>
+                    </div>
+                    <div class="academic-standing-badge">
+                        <span>Standing:</span>
+                        <strong class="status-passed-text">Honor Roll Clearance</strong>
+                    </div>
+                </footer>
+
+                <!-- SIGNATURE AUTHORIZATION TRACK -->
+                <div class="report-signature-row">
+                    <div class="signature-line-block">
+                        <div class="line-marker"></div>
+                        <p>Academic Registrar Endorsement</p>
+                    </div>
+                    <div class="signature-line-block">
+                        <div class="line-marker"></div>
+                        <p>Lead Faculty Advisor Signature</p>
+                    </div>
+                </div>
+
+            </div> <!-- / .report-card-print-frame -->
+        </div> <!-- / .viewport-data-container -->
+    </main>
+
+</body>
+
+</html>

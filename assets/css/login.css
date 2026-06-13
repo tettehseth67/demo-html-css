@@ -1,0 +1,237 @@
+/* ==========================================================================
+   🔑 SYSTEM AUTHORIZATION GATEWAY PRESENTATION SCHEMAS
+   ========================================================================== */
+
+:root {
+    --auth-bg-dark: #0f172a;
+    --auth-bg-surface: #ffffff;
+    --auth-accent-blue: #2563eb;
+    --auth-accent-hover: #1d4ed8;
+    --auth-txt-prime: #0f172a;
+    --auth-txt-second: #475569;
+    --auth-txt-muted: #94a3b8;
+    --auth-border-base: #e2e8f0;
+    --auth-shadow-card: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* --- STRUCTURAL INITIALIZATION RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- SCREEN BLUEPRINT MODEL GRID CONTROLS --- */
+.auth-viewport-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* --- LEFT INFOGRAPHIC DECOR PANEL --- */
+.auth-brand-infographic-panel {
+    background-color: var(--auth-bg-dark);
+    color: #ffffff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-image: radial-gradient(circle at 20% 30%, #1e293b 0%, #0f172a 100%);
+}
+
+.brand-system-node {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #f8fafc;
+}
+
+.infographic-content-center h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.infographic-content-center p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.infographic-system-version {
+    font-size: 0.85rem;
+    color: #475569;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- RIGHT FORM REGISTRY DATA PANEL --- */
+.auth-interactive-form-panel {
+    background-color: var(--auth-bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.form-capsule-wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+.form-header-intro {
+    margin-bottom: 36px;
+}
+
+.form-header-intro h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--auth-txt-prime);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.form-header-intro p {
+    font-size: 0.95rem;
+    color: var(--auth-txt-second);
+}
+
+/* --- CONTROL PANEL INPUT FORM FIELDS --- */
+.core-authentication-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.auth-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth-input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--auth-txt-second);
+}
+
+.label-link-split-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-contextual-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--auth-accent-blue);
+    text-decoration: none;
+}
+
+.form-contextual-link:hover {
+    text-decoration: underline;
+}
+
+.auth-input-field,
+.auth-select-field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--auth-border-base);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--auth-txt-prime);
+    background-color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.auth-input-field:focus,
+.auth-select-field:focus {
+    border-color: var(--auth-accent-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* --- SESSION PERSISTENCE INPUT SUB-ELEMENTS --- */
+.check-row-alignment {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-checkbox-control {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--auth-accent-blue);
+    cursor: pointer;
+}
+
+#persist-token-label {
+    font-size: 0.85rem;
+    color: var(--auth-txt-second);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* --- ACCESS ROUTE CTA COMMIT BUTTON --- */
+.auth-submit-gateway-btn {
+    background-color: var(--auth-accent-blue);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.auth-submit-gateway-btn:hover {
+    background-color: var(--auth-accent-hover);
+}
+
+.form-terminal-notice-bar {
+    margin-top: 40px;
+    border-top: 1px solid var(--auth-border-base);
+    padding-top: 20px;
+}
+
+.form-terminal-notice-bar p {
+    font-size: 0.75rem;
+    color: var(--auth-txt-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   📶 CSS RESPONSIVE OVERWRITES FOR AUTH GATEWAY
+   ========================================================================== */
+
+@media screen and (max-width: 960px) {
+    .auth-viewport-split {
+        grid-template-columns: 1fr;
+        /* Convert layout scheme to a standard unified column */
+    }
+
+    .auth-brand-infographic-panel {
+        display: none;
+        /* Hide infographic side-decor panel on tablet/mobile screens */
+    }
+
+    .auth-interactive-form-panel {
+        padding: 40px 20px;
+    }
+}

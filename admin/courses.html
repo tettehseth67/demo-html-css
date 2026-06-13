@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Academic Course Catalog</title>
+    <!-- Linking both the shared global styles and new layout mechanics -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/courses-styles.css">
+</head>
+
+<body>
+
+    <!-- APP SIDEBAR NAVIGATION RAIL (Matches index.html) -->
+    <aside class="side-navigation-rail">
+        <div class="branding-header">EduManage Hub</div>
+        <nav class="navigation-menu-wrapper">
+            <ul class="nav-links-list">
+                <li class="nav-link-item"><a href="dashboard.html">📊 System Overview</a></li>
+                <li class="nav-link-item"><a href="attendance.html">🎒 Student Directory</a></li>
+                <li class="nav-link-item"><a href="#">👩‍🏫 Faculty Rosters</a></li>
+                <li class="nav-link-item active"><a href="courses.html">📚 Course Catalogs</a></li>
+                <li class="nav-link-item"><a href="finance.html">💳 Fee Ledgers</a></li>
+                <li class="nav-link-item"><a href="settings.html">⚙️ Global Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN DATA VIEWPORT -->
+    <main class="primary-workspace-engine">
+
+        <!-- UTILITY HEADER BAR -->
+        <header class="utility-navbar-top">
+            <div class="search-input-capsule">
+                <input type="text" placeholder="Search course codes, departments, instructors...">
+            </div>
+            <div class="operator-profile-card">
+
+                <span class="profile-name">Root Admin</span>
+                <span class="profile-role">Academic Registrar</span>
+            </div>
+            <div class="avatar-fallback-frame">RA</div>
+        </header>
+
+        <!-- DATA PANELS WRAPPER -->
+        <div class="viewport-data-container">
+            <header class="view-intro-title border-split-flex">
+                <div>
+                    <h1>Academic Course Catalog</h1>
+                    <p>Manage curriculum subjects, track enrollment limits, and view department classes.</p>
+                </div>
+                <button class="add-course-btn">+ Add New Subject</button>
+            </header>
+
+            <!-- ACADEMIC INVENTORY GRID -->
+            <section class="courses-catalog-grid">
+
+                <!-- CARD 1 -->
+                <div class="course-panel-card">
+                    <div class="course-card-top">
+                        <span class="department-tag science-tag">Natural Sciences</span>
+                        <span class="course-code">SCI-302</span>
+                    </div>
+                    <h3 class="course-title">Advanced Organic Chemistry</h3>
+                    <p class="instructor-assigned">👨‍🏫 Instructor: <strong>Dr. Aris Thorne</strong></p>
+                    <div class="enrollment-tracker-container">
+                        <div class="tracker-meta">
+                            <span>Enrollment Cap</span>
+                            <strong>24 / 30 Students</strong>
+                        </div>
+                        <div class="progress-bar-rail">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="course-panel-card">
+                    <div class="course-card-top">
+                        <span class="department-tag math-tag">Mathematics &amp; Data</span>
+                        <span class="course-code">MAT-401</span>
+                    </div>
+                    <h3 class="course-title">Linear Algebra &amp; Statistics</h3>
+                    <p class="instructor-assigned">👩‍🏫 Instructor: <strong>Prof. Clara Vance</strong></p>
+                    <div class="enrollment-tracker-container">
+                        <div class="tracker-meta">
+                            <span>Enrollment Cap</span>
+                            <strong>30 / 30 Students</strong>
+                        </div>
+                        <div class="progress-bar-rail status-full">
+                            <div class="progress-fill cap-reached"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="course-panel-card">
+                    <div class="course-card-top">
+                        <span class="department-tag humanities-tag">Humanities &amp; Arts</span>
+                        <span class="course-code">HIS-112</span>
+                    </div>
+                    <h3 class="course-title">Modern World History II</h3>
+                    <p class="instructor-assigned">👨‍🏫 Instructor: <strong>Marcus Sterling</strong></p>
+                    <div class="enrollment-tracker-container">
+                        <div class="tracker-meta">
+                            <span>Enrollment Cap</span>
+                            <strong>15 / 45 Students</strong>
+                        </div>
+                        <div class="progress-bar-rail">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="course-panel-card">
+                    <div class="course-card-top">
+                        <span class="department-tag languages-tag">Languages</span>
+                        <span class="course-code">ENG-204</span>
+                    </div>
+                    <h3 class="course-title">Creative Writing Workshop</h3>
+                    <p class="instructor-assigned">👩‍🏫 Instructor: <strong>Sarah Jenkins</strong></p>
+                    <div class="enrollment-tracker-container">
+                        <div class="tracker-meta">
+                            <span>Enrollment Cap</span>
+                            <strong>12 / 25 Students</strong>
+                        </div>
+                        <div class="progress-bar-rail">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

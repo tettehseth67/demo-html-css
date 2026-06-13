@@ -1,0 +1,1151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --- GLOBAL CONFIGURATION DESIGN VARIANTS --- */
+:root {
+    --side-rail-bg: #0f172a;
+    --canvas-bg: #f8fafc;
+    --surface-bg: #ffffff;
+    --interactive-blue: #2563eb;
+    --interactive-hover: #1d4ed8;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted-gray: #94a3b8;
+    --border-structural: #e2e8f0;
+    --shadow-subtle: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* --- CORE INITIALIZATION BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--canvas-bg);
+    color: var(--text-primary);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* --- LAYOUT COMPONENT: APP NAVIGATION RAIL --- */
+.side-navigation-rail {
+    background-color: var(--side-rail-bg);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.branding-header {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+    color: #f8fafc;
+}
+
+.nav-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-link-item a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.nav-link-item a:hover,
+.nav-link-item.active a {
+    background-color: var(--interactive-blue);
+    color: #ffffff;
+}
+
+/* --- LAYOUT COMPONENT: DATA WORKSPACE ENGINE --- */
+.primary-workspace-engine {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.utility-navbar-top {
+    background-color: var(--surface-bg);
+    border-bottom: 1px solid var(--border-structural);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.search-input-capsule input {
+    padding: 10px 16px;
+    width: 340px;
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #f1f5f9;
+    outline: none;
+}
+
+.search-input-capsule input:focus {
+    border-color: var(--interactive-blue);
+    background-color: var(--surface-bg);
+}
+
+/* Add or verify these rules exist inside your styles.css file */
+
+.operator-profile-card {
+    position: relative;
+    /* Set anchor position frame for drop down alignment box */
+}
+
+.identity-trigger-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: right;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.identity-trigger-wrapper:hover {
+    background-color: var(--canvas-bg);
+}
+
+/* Hidden container state by default */
+.profile-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 220px;
+    background-color: var(--surface-bg);
+    border: 1px solid var(--border-structural);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 999;
+    display: none;
+    /* Block display is controlled directly via JavaScript actions */
+}
+
+/* JavaScript Dynamic Switch Class */
+.profile-dropdown-menu.is-active {
+    display: block;
+}
+
+.dropdown-menu-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-structural);
+}
+
+.dropdown-menu-header h4 {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-links-list {
+    list-style: none;
+    padding: 8px;
+}
+
+.modal-links-list li a {
+    display: block;
+    padding: 10px 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: background 0.15s ease;
+}
+
+.modal-links-list li a:hover {
+    background-color: var(--canvas-bg);
+    color: var(--interactive-blue);
+}
+
+.modal-links-list li a.logout-link {
+    color: #ef4444;
+}
+
+.identity-badge-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.profile-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.profile-role {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.avatar-fallback-frame {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #8b5cf6;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* --- INTERNAL DATA RECEPTACLE VIEWPORT --- */
+.viewport-data-container {
+    padding: 40px;
+}
+
+.view-intro-title {
+    margin-bottom: 32px;
+}
+
+.view-intro-title h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.view-intro-title p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* COMPONENT: ANALYTICS CARDS GRID SYSTEM */
+.metrics-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.analytical-metric-card {
+    background-color: var(--surface-bg);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border-structural);
+}
+
+.metric-card-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.metric-card-value {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* COMPONENT: TWO-COLUMN MIXED MODULE LAYOUT GRID */
+.operational-split-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.data-table-panel-card,
+.summary-notices-panel-card {
+    background-color: var(--surface-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border-structural);
+    padding: 24px;
+}
+
+.panel-card-header {
+    margin-bottom: 20px;
+}
+
+.panel-card-header h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* COMPONENT: DATA SHEET PRESENTATION SYSTEM */
+.registry-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.registry-data-table th {
+    background-color: #f8fafc;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-structural);
+}
+
+.registry-data-table td {
+    padding: 16px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.verification-badge {
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.verification-badge.status-passed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.verification-badge.status-review {
+    background-color: #ffedd5;
+    color: #9a3412;
+}
+
+/* COMPONENT: CONCISE DATA METADATA STREAM */
+.bulletin-board-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bulletin-board-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.bulletin-board-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.item-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   📶 CSS MEDIA QUERIES FOR RESPONSIVE BLUEPRINTS
+   ========================================================================== */
+
+/* --- TABLET BREAKPOINT (Screens under 1024px width) --- */
+/* ==========================================================================
+   📶 UNIFIED RESPONSIVE BLUEPRINT GRID
+   ========================================================================== */
+
+/* Base table utility wrapper to handle viewport cropping safely */
+.data-table-panel-card {
+    background-color: var(--surface-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border-structural);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+/* ==========================================================================
+   🎬 PURE CSS DYNAMIC POP-UP MODAL ENGINE
+   ========================================================================== */
+
+/* Hide the technical checkbox engine state from view */
+.modal-state-checkbox {
+    display: none;
+}
+
+/* Modal Overlay Layer (Hidden by default) */
+.modal-overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.4);
+    /* Dark transparency wash */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out;
+}
+
+/* Invisible label layer stretched full-screen to handle click-away dismissals */
+.modal-dismiss-click-zone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+/* Center Interactive Box Panel Container */
+.modal-body-panel {
+    background-color: var(--surface-bg);
+    border: 1px solid var(--border-structural);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 380px;
+    position: relative;
+    z-index: 1001;
+    transform: scale(0.9) translateY(-10px);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- LOGIC MATRIX: Open state triggers when checkbox becomes :checked --- */
+.modal-state-checkbox:checked~.modal-overlay-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-state-checkbox:checked~.modal-overlay-backdrop .modal-body-panel {
+    transform: scale(1) translateY(0);
+}
+
+/* --- MODAL DECORATIVE COMPONENT INTERNALS --- */
+.modal-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-structural);
+}
+
+.modal-panel-header h3 {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.modal-close-btn-x {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    line-height: 1;
+}
+
+.modal-panel-content {
+    padding: 20px;
+}
+
+.modal-user-summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.large-avatar {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.1rem !important;
+    background-color: var(--interactive-blue) !important;
+}
+
+.modal-user-summary h4 {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.modal-user-summary p {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.modal-links-list li a.logout-link:hover {
+    background: none;
+    color: #b91c1c;
+}
+
+/* ==========================================================================
+   👩‍🏫 FACULTY REGISTRY ONBOARDING COMPONENT STYLES
+   ========================================================================== */
+
+.faculty-form-card {
+    background-color: var(--surface-bg);
+}
+
+.faculty-form {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faculty-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.faculty-form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.faculty-form-group input,
+.faculty-form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: var(--surface-bg);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faculty-form-group input:focus,
+.faculty-form-group select:focus {
+    border-color: var(--interactive-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.faculty-submit-btn {
+    background-color: var(--interactive-blue);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.faculty-submit-btn:hover {
+    background-color: var(--interactive-hover);
+}
+
+.faculty-submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   🗑️ SYSTEM OPERATIONS ENTRY REMOVAL AND DELETION UTILITIES
+   ========================================================================== */
+
+.action-header-cell {
+    text-align: right;
+    padding-right: 24px !important;
+}
+
+.action-data-cell {
+    text-align: right;
+    padding-right: 20px !important;
+}
+
+.delete-entry-btn {
+    background-color: transparent;
+    color: #ef4444;
+    /* Warning Alert Red */
+    border: 1px solid currentColor;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-entry-btn:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.delete-entry-btn:active {
+    transform: scale(0.95);
+}
+
+/* --- AUTOMATIC DARK MODE RELEGATIONS --- */
+@media (prefers-color-scheme: dark) {
+    .modal-overlay-backdrop {
+        background-color: rgba(2, 6, 17, 0.7);
+    }
+}
+
+/* --- MOBILE PHONE BREAKPOINT ADJUSTMENTS --- */
+@media screen and (max-width: 550px) {
+    .modal-body-panel {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 16px 16px 0 0;
+        /* Convert into a bottom tray sheet format on mobile devices */
+        transform: translateY(100%);
+        transition: transform 0.25s ease-out;
+    }
+
+    .modal-state-checkbox:checked~.modal-overlay-backdrop .modal-body-panel {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   🎒 STUDENT DIRECTORY & ATTENDANCE LIST STYLES
+   ========================================================================== */
+
+.split-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cohort-select-dropdown {
+    padding: 10px 16px;
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    background-color: var(--surface-bg);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+.full-width-panel-stack {
+    width: 100%;
+}
+
+.table-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commit-sheet-btn {
+    background-color: var(--interactive-blue);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.commit-sheet-btn:hover {
+    background-color: var(--interactive-hover);
+}
+
+/* Attendance Metric Spacing Utilities */
+.center-align-cell {
+    text-align: center !important;
+}
+
+.attendance-rate-high {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.attendance-rate-mid {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.attendance-rate-low {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.text-alert-red {
+    color: #ef4444 !important;
+}
+
+/* Custom Native Radio Inputs Overwrites */
+.custom-radio-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--text-muted-gray);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+/* Interactive Color Highlights Upon Active Selections */
+.present-radio:checked {
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+.late-radio:checked {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+}
+
+.absent-radio:checked {
+    background-color: #ef4444;
+    border-color: #ef4444;
+}
+
+/* Responsive Adjustments for Mobile Headers */
+@media screen and (max-width: 640px) {
+    .split-title-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cohort-select-dropdown,
+    .commit-sheet-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   📜 OFFICIAL SCHOLASTIC REPORT CARD PRINT & DISPLAY SYSTEM
+   ========================================================================== */
+
+.report-card-print-frame {
+    background-color: var(--surface-bg);
+    border: 1px solid var(--border-structural);
+    border-radius: 16px;
+    box-shadow: var(--shadow-subtle);
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.report-card-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+}
+
+.report-school-brand h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.report-school-brand p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.report-term-badge {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.report-term-badge strong {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Student Information Row Data Grid */
+.student-profile-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: var(--canvas-bg);
+    border: 1px solid var(--border-structural);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.profile-data-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-cell-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.profile-cell-value {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* High-Contrast Grades Presentation Layout */
+.report-card-table-panel {
+    margin-bottom: 32px;
+}
+
+.report-grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.report-grades-table th {
+    background-color: var(--text-primary);
+    color: var(--surface-bg);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 16px;
+}
+
+.report-grades-table td {
+    padding: 16px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-structural);
+    color: var(--text-primary);
+}
+
+.center-align-text {
+    text-align: center !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+/* Summary Calculations Box Elements */
+.report-card-summary-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--border-structural);
+    padding-top: 20px;
+    margin-bottom: 56px;
+}
+
+.gpa-summary-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gpa-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.gpa-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--interactive-blue);
+}
+
+.academic-standing-badge {
+    font-size: 0.9rem;
+}
+
+.status-passed-text {
+    color: #10b981;
+    font-weight: 700;
+}
+
+/* Formal Verification Signature Pads */
+.report-signature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.signature-line-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.line-marker {
+    border-bottom: 1px dashed var(--text-muted-gray);
+    height: 20px;
+    width: 100%;
+}
+
+.signature-line-block p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   🖨️ NATIVE PHYSICAL PRINTER OVERRIDES (AUTOMATIC PROCESSING)
+   ========================================================================== */
+@media print {
+
+    /* Completely eliminate dashboard navigation, top header utility toolbars, and scroll boxes */
+    body {
+        grid-template-columns: 1fr !important;
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .side-navigation-rail,
+    .utility-navbar-top,
+    .commit-sheet-btn {
+        display: none !important;
+        /* Drops tracking sidebars out of print process entirely */
+    }
+
+    .primary-workspace-engine {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .viewport-data-container {
+        padding: 0 !important;
+    }
+
+    .report-card-print-frame {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .student-profile-summary-grid {
+        background-color: #f8fafc !important;
+        /* Retains clean light contrast in gray prints */
+        -webkit-print-color-adjust: exact;
+        /* Standardizes background color printing across engine options */
+        print-color-adjust: exact;
+    }
+
+    .gpa-value {
+        color: #000000 !important;
+    }
+}
+
+/* --- 2. LAPTOP & MEDIUM SCREEN OPTIMIZATIONS (Under 1200px) --- */
+@media screen and (max-width: 1200px) {
+    .viewport-data-container {
+        padding: 30px 24px;
+    }
+
+    /* Transition the 2-column layout into a balanced stack framework */
+    .operational-split-grid,
+    .directory-split-grid,
+    .finance-layout-override {
+        grid-template-columns: 1fr !important;
+        gap: 28px;
+    }
+}
+
+
+/* --- 3. TABLET & FLUID INTERACTION INTERFACE (Under 900px) --- */
+@media screen and (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+        /* Drop left sidebar out of default display grid */
+    }
+
+    /* Transform Sidebar into a horizontal top header track */
+    .side-navigation-rail {
+        width: 100%;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border-structural);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .branding-header {
+        margin-bottom: 0;
+        /* Align brand inline */
+        font-size: 1.25rem;
+    }
+
+    /* Make navigation buttons scrollable horizontally across the screen */
+    .navigation-menu-wrapper {
+        max-width: 70%;
+    }
+
+    .nav-links-list {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 4px;
+        padding-bottom: 4px;
+    }
+
+    .nav-links-list::-webkit-scrollbar {
+        display: none;
+        /* Safari/Chrome scrollbar removal */
+    }
+
+    .nav-link-item a {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .primary-workspace-engine {
+        grid-template-rows: auto 1fr;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .utility-navbar-top {
+        padding: 0 24px;
+        height: 60px;
+    }
+}
+
+
+/* --- 4. SMARTPHONE & ULTRA-COMPACT VIEWPORTS (Under 550px) --- */
+@media screen and (max-width: 550px) {
+
+    /* Collapse top navigation into an application toolbar layout */
+    .side-navigation-rail {
+        padding: 12px 16px;
+    }
+
+    .nav-links-list {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--side-rail-bg);
+        padding: 10px 16px;
+        border-top: 1px solid var(--border-structural);
+        z-index: 999;
+        /* Affix navigation items directly to bottom viewport like an app */
+        justify-content: space-between;
+    }
+
+    .nav-link-item a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Stack searching operations and credentials blocks vertically */
+    .utility-navbar-top {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 16px;
+        gap: 14px;
+        align-items: stretch;
+        border-bottom: 1px solid var(--border-structural);
+    }
+
+    .search-input-capsule input {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .operator-profile-card {
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .profile-name {
+        font-size: 0.85rem;
+    }
+
+    /* Maximize canvas space for app items */
+    .viewport-data-container {
+        padding: 16px;
+        padding-bottom: 80px;
+        /* Cushion space so content doesn't get covered by bottom navigation rail */
+    }
+
+    .view-intro-title {
+        margin-bottom: 20px;
+    }
+
+    .view-intro-title h1 {
+        font-size: 1.35rem;
+        letter-spacing: -0.3px;
+    }
+
+    /* Collapse statistics dashboard blocks down to single tracks */
+    .metrics-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .analytical-metric-card {
+        padding: 16px;
+    }
+
+    .metric-card-value {
+        font-size: 1.6rem;
+    }
+
+    /* Restructure compact internal card panels padding scales */
+    .data-table-panel-card,
+    .summary-notices-panel-card {
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .panel-card-header h2 {
+        font-size: 1.05rem;
+    }
+
+    .registry-data-table th,
+    .registry-data-table td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+}

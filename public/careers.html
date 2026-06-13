@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Faculty | EduManage Academy</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/public-styles.css">
+</head>
+
+<body>
+
+    <header class="public-site-header">
+        <div class="header-container">
+            <a href="index.html" class="site-logo">🏫 EduManage Academy</a>
+            <nav class="public-nav">
+                <ul class="public-nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li class="active"><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="portal-cta-btn">System Portal Login</a>
+        </div>
+    </header>
+
+    <main class="main-wrapper page-interior-padding">
+        <div class="section-container single-column-container">
+            <header class="section-title-header">
+                <span class="showcase-pre-title">Employment</span>
+                <h1>Join Our Academic Faculty</h1>
+                <p>We are seeking innovative educators specializing in physics modeling, computational vector
+                    mathematics, and data analytics.</p>
+            </header>
+
+            <div class="compact-form-card full-width-override">
+                <h3 class="form-panel-title">Faculty Intake Application</h3>
+                <form id="careersForm" onsubmit="return false;" class="careers-portal-form">
+                    <div class="public-form-group">
+                        <label>Legal Full Name</label>
+                        <input type="text" required placeholder="e.g., Prof. Alan Turing">
+                    </div>
+                    <div class="public-form-group">
+                        <label>Target Department Expertise</label>
+                        <select required>
+                            <option value="">-- Choose Field --</option>
+                            <option>Natural Sciences Division</option>
+                            <option>Mathematics &amp; Data Division</option>
+                            <option>Languages &amp; Literature</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="public-submit-btn">Submit Employment Registry File</button>
+                </form>
+
+                <div id="careersSuccess" class="public-alert-box">
+                    <h4>✔️ Application Successfully Logged</h4>
+                    <p>Our Human Resources desk will review your credentials index profile sequentially.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="public-site-footer">
+        <div class="section-container footer-layout-grid">
+            <!-- BRAND HUB COLUMN -->
+            <div class="footer-brand-column">
+                <span class="footer-logo">🏫 EduManage Academy</span>
+                <p class="footer-brand-bio">Centralized architectural learning environments delivering rigorous, modern
+                    academic tracks for upcoming global scholars.</p>
+            </div>
+            <!-- PUBLIC LINK MATRIX COLUMN 1 -->
+            <div class="footer-links-column">
+                <h4>Academic Registry</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="academics.html">Academic Divisions</a></li>
+                    <li><a href="admissions.html">Admissions Intake</a></li>
+                    <li><a href="resources.html">Parent Resources</a></li>
+                </ul>
+            </div>
+            <!-- PUBLIC LINK MATRIX COLUMN 2 (NEW SECTIONS) -->
+            <div class="footer-links-column">
+                <h4>Campus Portals</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="news.html">Campus News Feed</a></li>
+                    <li><a href="student-life.html">Student Life &amp; Athletics</a></li>
+                    <li><a href="careers.html">Join Our Faculty</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- LOWER COPYRIGHT SECURITY DEPLOYMENT TRACK -->
+        <div class="footer-terminal-bar">
+            <div class="section-container terminal-bar-flex">
+                <p>&copy; 2026 EduManage Core Academy. Central Systems Audited Configuration.</p>
+                <p>Administrative Node Location: Delaware, USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('careersForm');
+            const success = document.getElementById('careersSuccess');
+            if (form && success) {
+                form.addEventListener('submit', () => {
+                    form.style.display = 'none';
+                    success.style.display = 'block';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

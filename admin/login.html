@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage Hub - Gatekeeper Authentication</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+
+<body>
+
+    <!-- PRIMARY AUTHENTICATION SPLIT SCREEN LAYOUT -->
+    <main class="auth-viewport-split">
+
+        <!-- LEFT BRAND PANEL INTERFACE -->
+        <section class="auth-brand-infographic-panel">
+            <div class="infographic-brand-header">
+                <span class="brand-system-node">EduManage Hub</span>
+            </div>
+            <div class="infographic-content-center">
+                <h2>Unified Institutional Control Environment.</h2>
+                <p>Access your centralized school administration workspace, analytical frameworks, billing ledgers, and
+                    academic catalogs.</p>
+            </div>
+            <div class="infographic-system-version">
+                <span>Enterprise Gateway System Pro V4.2</span>
+            </div>
+        </section>
+
+        <!-- RIGHT GATEWAY INTERACTIVE FORM PANEL -->
+        <section class="auth-interactive-form-panel">
+            <div class="form-capsule-wrapper">
+
+                <header class="form-header-intro">
+                    <h1>Portal Authentication</h1>
+                    <p>Provide your system credentials to access your portal space.</p>
+                </header>
+
+                <!-- IDENTITY REGISTRY LOGIN CONTROL FORM -->
+                <form action="dashboard.html" class="core-authentication-form">
+
+                    <!-- USER ACCOUNT CLASSIFICATION TYPE SELECTOR -->
+                    <div class="auth-input-group">
+                        <label>Institutional Role Clearance</label>
+                        <select class="auth-select-field" required>
+                            <option value="admin">Root System Administrator</option>
+                            <option value="faculty">Faculty &amp; Teaching Staff</option>
+                            <option value="student">Student / Academic Learner</option>
+                        </select>
+                    </div>
+
+                    <!-- IDENTIFIER STRING INPUT -->
+                    <div class="auth-input-group">
+                        <label>Verification Reference ID / Email</label>
+                        <input type="text" class="auth-input-field" placeholder="e.g., admin@edumanagecore.edu" required
+                            autocomplete="username">
+                    </div>
+
+                    <!-- PASSKEY INJECTION INPUT -->
+                    <div class="auth-input-group">
+                        <div class="label-link-split-row">
+                            <label>Secure Gateway Key Code</label>
+                            <a href="#" class="form-contextual-link">Forgot Key?</a>
+                        </div>
+                        <input type="password" class="auth-input-field" placeholder="••••••••••••" required
+                            autocomplete="current-password">
+                    </div>
+
+                    <!-- SUBSIDIARY PERSISTENCE FLAG CONTROL -->
+                    <div class="auth-input-group check-row-alignment">
+                        <input type="checkbox" id="persist-token-flag" class="auth-checkbox-control">
+                        <label id="persist-token-label" for="persist-token-flag">Maintain Secure Session Authorization
+                            Token</label>
+                    </div>
+
+                    <!-- TRIGGER ACCESS ROUTE ACTION -->
+                    <button type="submit" class="auth-submit-gateway-btn">Authorize Entry to Hub</button>
+
+                </form>
+
+                <footer class="form-terminal-notice-bar">
+                    <p>Secured via end-to-end operational audit token logic. Unauthorized data access tracking protocols
+                        active.</p>
+                </footer>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
