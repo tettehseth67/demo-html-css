@@ -1413,26 +1413,30 @@ body {
    📶 PART 4: COMPREHENSIVE RESPONSIVE TABLET MEDIA BREAKPOINTS
    ========================================================================== */
 
+/* ==========================================================================
+   📶 PART 4: PRODUCTION-GRADE TABLET MEDIA QUERIES & SLIDE DRAWER
+   ========================================================================== */
+
 @media screen and (max-width: 1024px) {
 
-    /* --- 1. FIXED INTERFACE HEADER ADJUSTMENTS --- */
+    /* --- 1. HEADER CONTAINER BAR OVERRIDES --- */
     .header-desktop-actions {
         display: none;
     }
 
-    /* Stack your hidden checkbox selector natively inside the header flow */
+    /* Keep the toggle input completely invisible but floating right above the hamburger button */
     .header-toggle-checkbox {
         position: absolute;
-        /* Changed from fixed to absolute */
         top: 23px;
         right: 24px;
         width: 24px;
         height: 24px;
         opacity: 0;
-        z-index: 1150;
-        /* Sits directly over the burger lines box */
+        z-index: 1500;
+        /* ⚠️ Sits directly on top to always catch the toggle clicks */
         display: block;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .header-hamburger-btn {
@@ -1442,9 +1446,9 @@ body {
         width: 24px;
         height: 18px;
         cursor: pointer;
-        z-index: 1100;
+        z-index: 1400;
+        /* Floating right beneath the invisible checkbox screen */
         position: relative;
-        /* Keeps it aligned directly underneath the hidden input mask */
     }
 
     .hamburger-bar-line {
@@ -1452,78 +1456,89 @@ body {
         height: 2px;
         background-color: var(--pub-text-prime);
         border-radius: 4px;
-        transition: transform 0.25s ease, opacity 0.25s ease;
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* --- 2. CONSTRAINED MOBILE NAVIGATION DRAWER --- */
+    /* --- 2. OPTIMIZED SLIDE-OUT PANEL DRAWER --- */
     .public-nav {
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 260px;
+        right: -300px;
+        /* ⚠️ Placed far off-canvas to protect text click areas */
+        width: 280px;
         max-width: 80vw;
         height: 100vh;
         background-color: var(--pub-bg-card);
         border-left: 1px solid var(--pub-border);
-        box-shadow: -8px 0 24px rgba(15, 23, 42, 0.04);
-        padding: 100px 24px 40px 24px;
+        box-shadow: -10px 0 30px rgba(15, 23, 42, 0.06);
+        padding: 100px 32px 40px 32px;
         display: block;
         box-sizing: border-box;
-        transition: right 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1050;
-        /* Sits cleanly behind click targets */
+        /* Premium ease curve manages smooth, snappy motion speeds */
+        transition: right 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 1300;
     }
 
     .public-nav-links {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
+        gap: 12px;
         width: 100%;
         list-style: none;
     }
 
-    /* Individual list items protect interaction layers */
+    /* Individual row boxes shield layer order */
     .public-nav-links li {
         width: 100%;
         position: relative;
-        z-index: 1200;
+        z-index: 1310;
     }
 
-    /* Text anchor target click zones */
+    /* Text anchor target click captures */
     .public-nav-links a {
-        font-size: 1rem;
+        font-size: 1.05rem;
         display: block;
         width: 100%;
         padding: 12px 0;
-        /* Expanded padding creates larger touchscreen tap targets */
+        /* Creates large touchscreen thumb tap vectors */
         border-bottom: none !important;
         position: relative;
-        z-index: 1250;
+        z-index: 1320;
         /* Floating foremost layer catches clicks with zero interference */
     }
 
     .mobile-only-cta {
         display: block;
         width: 100%;
-        margin-top: 12px;
+        margin-top: 16px;
         border-top: 1px solid var(--pub-border);
-        padding-top: 20px;
+        padding-top: 24px;
         box-sizing: border-box;
+        z-index: 1310;
     }
 
     .mobile-only-cta .portal-cta-btn {
         display: block;
         width: 100%;
         text-align: center;
+        font-size: 1rem;
+        padding: 12px;
     }
 
-    /* --- 3. THE PURE CSS TOGGLE LOGIC CODE MATRIX --- */
+    /* --- 3. PURE CSS DRAWER INTERACTION MATRIX --- */
+    /* Slide out drawer panel when trigger checkbox is checked on tap */
     .header-toggle-checkbox:checked~.public-nav {
         right: 0;
     }
 
-    /* Morph three burger bars into a clean, modern close "X" marker icon */
+    /* Morph three horizontal hamburger bars into a crisp close "X" marker icon */
+    .header-toggle-checkbox:checked~.header-hamburger-btn {
+        z-index: 1600;
+        /* Pull close trigger button over drawer wrapper view safely */
+    }
+
     .header-toggle-checkbox:checked~.header-hamburger-btn .hamburger-bar-line:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -1536,8 +1551,8 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* --- 4. PUBLIC SUB-PAGE STACKING BREAKPOINTS --- */
-    /* Academics Workspace Split */
+    /* --- 4. PUBLIC SUB-PAGE ROW BREAKPOINTS --- */
+    /* Academics Workspace Grid Unstacking */
     .academics-workspace-split {
         grid-template-columns: 1fr !important;
         gap: 32px;
@@ -1565,7 +1580,7 @@ body {
         padding: 8px 16px;
     }
 
-    /* Parent Resources Workspace Split */
+    /* Parent Resources Workspace Grid Unstacking */
     .resources-workspace-split {
         grid-template-columns: 1fr !important;
         gap: 32px;
