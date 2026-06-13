@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Registration | EduManage Academy</title>
-    <!-- Corrected relative path to find styles from inside public/ directory -->
     <link rel="stylesheet" href="../assets/css/public-styles.css">
 </head>
 
@@ -14,8 +13,10 @@
     <!-- GLOBAL SITE NAVIGATION HEADER -->
     <header class="public-site-header">
         <div class="header-container">
+
             <a href="../index.html" class="site-logo">🏫 EduManage Academy</a>
 
+            <!-- Pure CSS Responsive Navigation Trigger System -->
             <input type="checkbox" id="header-menu-toggle" class="header-toggle-checkbox">
             <label for="header-menu-toggle" class="header-hamburger-btn" aria-label="Toggle Menu Layout">
                 <span class="hamburger-bar-line"></span>
@@ -23,6 +24,7 @@
                 <span class="hamburger-bar-line"></span>
             </label>
 
+            <!-- Navigation Links Wrapper Matrix -->
             <nav class="public-nav">
                 <ul class="public-nav-links">
                     <li><a href="../index.html">Home</a></li>
@@ -30,19 +32,23 @@
                     <li class="active"><a href="admissions.html">Admissions Intake</a></li>
                     <li><a href="resources.html">Parent Resources</a></li>
                     <li><a href="careers.html">Careers</a></li>
-                    <li class="mobile-only-cta"><a href="../admin/gate.html" class="portal-cta-btn">Portal Login</a>
+                    <!-- Visible strictly on compact mobile menu slide-out panels -->
+                    <li class="mobile-only-cta"><a href="../admin/gate.html" class="portal-cta-btn">Portal
+                            Login</a>
                     </li>
                 </ul>
             </nav>
-
+            <!-- Desktop Profile Gateway Entry CTA Button -->
             <div class="header-desktop-actions">
                 <a href="../admin/gate.html" class="portal-cta-btn">System Portal Login</a>
             </div>
         </div>
     </header>
 
+    <!-- MAIN EXPLICIT WORKSPACE CONTENT -->
     <main class="main-wrapper page-interior-padding">
         <div class="section-container">
+
             <header class="section-title-header">
                 <span class="showcase-pre-title">Enrollment Office</span>
                 <h1>Online Student Admission Application</h1>
@@ -50,22 +56,40 @@
                     sequentially.</p>
             </header>
 
-            <div class="operational-split-grid">
-                <div class="admissions-procedural-column">
-                    <div class="division-card">
-                        <h3>Registration Parameters &amp; Deadlines</h3>
-                        <p>Applicants must fill out all identifier strings accurately to prevent system tracking faults
+            <!-- PROFESSIONAL TWO-COLUMN SPLIT PANEL INTAKE WORKSPACE -->
+            <div class="operational-split-grid"
+                style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: start;">
+
+                <!-- COLUMN A: PROCEDURAL POLICIES & CUTOFFS -->
+                <div class="admissions-procedural-column" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="division-card" style="padding: 32px; border-radius: 12px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--pub-text-prime);">Registration
+                            Parameters &amp; Deadlines</h3>
+                        <p
+                            style="font-size: 0.95rem; color: var(--pub-text-second); line-height: 1.6; margin-bottom: 16px;">
+                            Applicants must fill out all identifier strings accurately to prevent system tracking faults
                             inside administrative data arrays.</p>
-                        <ul>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--pub-text-second);">
                             <li>📅 <strong>Intake Closes:</strong> August 1st, 2026</li>
                             <li>🔍 <strong>File Evaluation Cycle:</strong> 5-7 Working Days</li>
                             <li>🔐 <strong>MFA Token Deployment:</strong> Sent via primary contact email</li>
                         </ul>
                     </div>
+
+                    <div class="division-card" style="padding: 32px; border-radius: 12px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--pub-text-prime);">Audit Notice
+                            for Parents</h3>
+                        <p style="font-size: 0.9rem; color: var(--pub-text-second); line-height: 1.5;">Upon dispatching
+                            this digital entry form record, the platform logic will automatically compile a tracking
+                            token reference. Keep this key code safe to check application states later.</p>
+                    </div>
                 </div>
 
-                <div class="compact-form-card">
+                <!-- COLUMN B: HIGH-CONTRAST SECURE ENTRY FORM PANEL -->
+                <div class="compact-form-card" style="margin-top: 0; width: 100%; border-radius: 12px; padding: 40px;">
                     <form id="publicAdmissionForm" onsubmit="return false;">
+
                         <div class="form-row-split">
                             <div class="public-form-group">
                                 <label>Applicant Legal First Name</label>
@@ -78,6 +102,7 @@
                                     autocomplete="family-name">
                             </div>
                         </div>
+
                         <div class="public-form-group">
                             <label>Target Cohort Grade Level Designation</label>
                             <select id="appGradeLevel" required>
@@ -88,32 +113,45 @@
                                 <option>Grade 12 Science Block</option>
                             </select>
                         </div>
+
                         <div class="public-form-group">
                             <label>Parent / Guardian Secure Contact Email</label>
                             <input type="email" id="appEmail" placeholder="guardian@example.com" required
                                 autocomplete="email">
                         </div>
-                        <button type="submit" class="public-submit-btn">Commit Formal Application Entry</button>
+
+                        <button type="submit" class="public-submit-btn" style="padding: 14px;">Commit Formal Application
+                            Entry</button>
                     </form>
 
-                    <div id="formSuccessAlert" class="public-alert-box">
-                        <h4>🎉 Application Dispatched to Registrar Hub!</h4>
-                        <p>Your secure system tracking token index is: <strong
-                                id="trackingTokenField">#ADM-XXXXX</strong>. A verification summary block has been
-                            routed to your contact email.</p>
+                    <!-- REGISTRATION SUCCESS DISPATCH BANNER (Hidden until form submit) -->
+                    <div id="formSuccessAlert" class="public-alert-box"
+                        style="border-radius: 8px; padding: 24px; background-color: #d1fae5; border: 1px solid #a7f3d0; color: #065f46;">
+                        <h4 style="font-weight: 700; margin-bottom: 6px; font-size: 1.1rem;">🎉 Application Dispatched
+                            to Registrar Hub!</h4>
+                        <p style="font-size: 0.95rem; line-height: 1.5; color: #047857;">Your secure system tracking
+                            token index is: <strong id="trackingTokenField"
+                                style="font-size: 1.1rem; text-decoration: underline;">#ADM-XXXXX</strong>. A
+                            verification summary block has been routed to your contact email.</p>
                     </div>
                 </div>
-            </div>
+
+            </div> <!-- / .operational-split-grid -->
         </div>
     </main>
 
+    <!-- GLOBAL SITE FOOTER -->
     <footer class="public-site-footer">
         <div class="section-container footer-layout-grid">
+
+            <!-- BRAND HUB COLUMN -->
             <div class="footer-brand-column">
                 <span class="footer-logo">🏫 EduManage Academy</span>
                 <p class="footer-brand-bio">Centralized architectural learning environments delivering rigorous, modern
                     academic tracks for upcoming global scholars.</p>
             </div>
+
+            <!-- PUBLIC LINK MATRIX COLUMN 1 -->
             <div class="footer-links-column">
                 <h4>Academic Registry</h4>
                 <ul class="footer-nav-list">
@@ -122,6 +160,8 @@
                     <li><a href="resources.html">Parent Resources</a></li>
                 </ul>
             </div>
+
+            <!-- PUBLIC LINK MATRIX COLUMN 2 (NEW SECTIONS) -->
             <div class="footer-links-column">
                 <h4>Campus Portals</h4>
                 <ul class="footer-nav-list">
@@ -130,7 +170,10 @@
                     <li><a href="careers.html">Join Our Faculty</a></li>
                 </ul>
             </div>
+
         </div>
+
+        <!-- LOWER COPYRIGHT SECURITY DEPLOYMENT TRACK -->
         <div class="footer-terminal-bar">
             <div class="section-container terminal-bar-flex">
                 <p>&copy; 2026 EduManage Core Academy. Central Systems Audited Configuration.</p>
@@ -139,14 +182,17 @@
         </div>
     </footer>
 
+    <!-- INTERACTIVE DISPATCH EVENT TOKEN CALCULATOR SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('publicAdmissionForm');
             const alertBox = document.getElementById('formSuccessAlert');
             const tokenField = document.getElementById('trackingTokenField');
+
             if (form && alertBox && tokenField) {
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
+                    // Compile randomized tracking sequence ticket number
                     tokenField.textContent = '#ADM-' + Math.floor(10000 + Math.random() * 90000);
                     form.style.display = 'none';
                     alertBox.style.display = 'block';
