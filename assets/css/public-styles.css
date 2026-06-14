@@ -71,8 +71,7 @@ body {
     line-height: 1.5;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .section-container {
@@ -792,7 +791,10 @@ body {
     color: var(--pub-theme-accent);
 }
 
-/* --- DIVISIONS STICKY GRID SPLIT (ACADEMICS PAGE) --- */
+/* ==========================================================================
+   📚 ACADEMICS DIVISION SUB-PAGE DESKTOP BASE INFRASTRUCTURE
+   ========================================================================== */
+
 .academics-workspace-split {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -839,7 +841,7 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     border-radius: 6px;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 }
 
 .rail-anchor-link:hover,
@@ -861,6 +863,10 @@ body {
     border-radius: 16px;
     padding: 40px;
     box-shadow: var(--pub-shadow);
+}
+
+.row-block-header {
+    margin-bottom: 16px;
 }
 
 .block-index-tag {
@@ -898,6 +904,7 @@ body {
     background-color: var(--pub-bg-alt);
     border-radius: 6px;
     border-left: 3px solid var(--pub-theme-accent);
+    color: var(--pub-text-prime);
 }
 
 /* Public Contact */
@@ -1094,7 +1101,7 @@ body {
 /* --- HOVER FAQ ACCORDIONS MATRIX --- */
 .public-faq-section {
     padding: 100px 0;
-    
+
     border-top: 1px solid var(--pub-border);
 }
 
@@ -1410,21 +1417,34 @@ body {
 }
 
 /* ==========================================================================
-   📶 PART 4: COMPREHENSIVE RESPONSIVE TABLET MEDIA BREAKPOINTS
-   ========================================================================== */
-
-/* ==========================================================================
-   📶 PART 4: PRODUCTION-GRADE TABLET MEDIA QUERIES & SLIDE DRAWER
+   📶 PART 4: VERTICAL COLLAPSE OVERLAY BREAKPOINT SYSTEM (NO SIDE SLIDE)
    ========================================================================== */
 
 @media screen and (max-width: 1024px) {
 
-    /* --- 1. HEADER CONTAINER BAR OVERRIDES --- */
     .header-desktop-actions {
-        display: none;
+        display: none !important;
     }
 
-    /* Keep the toggle input completely invisible but floating right above the hamburger button */
+    /* --- 1. FIXED ROW BOUNDS --- */
+    .public-site-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02);
+    }
+
+    .header-container {
+        position: relative;
+        height: 70px;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+
+    /* --- 2. THE MECHANICAL TOUCH TRIGGER BUTTONS --- */
     .header-toggle-checkbox {
         position: absolute;
         top: 23px;
@@ -1432,113 +1452,116 @@ body {
         width: 24px;
         height: 24px;
         opacity: 0;
-        z-index: 1500;
-        /* ⚠️ Sits directly on top to always catch the toggle clicks */
-        display: block;
+        z-index: 2500;
+        /* Floats directly on top to catch finger taps instantly */
+        display: block !important;
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
     }
 
     .header-hamburger-btn {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
         width: 24px;
         height: 18px;
         cursor: pointer;
-        z-index: 1400;
-        /* Floating right beneath the invisible checkbox screen */
+        z-index: 2400;
+        /* Placed cleanly behind input layer mask */
         position: relative;
     }
 
     .hamburger-bar-line {
         width: 100%;
         height: 2px;
-        background-color: var(--pub-text-prime);
+        background-color: var(--pub-text-prime) !important;
         border-radius: 4px;
-        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-            opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    /* --- 2. OPTIMIZED SLIDE-OUT PANEL DRAWER --- */
+    /* --- 3. THE SAFE VERTICAL DROPDOWN PANEL (NO HORIZONTAL EXCLUSIONS) --- */
     .public-nav {
-        position: fixed;
-        top: 0;
-        right: -300px;
-        /* ⚠️ Placed far off-canvas to protect text click areas */
-        width: 280px;
-        max-width: 80vw;
-        height: 100vh;
-        background-color: var(--pub-bg-card);
-        border-left: 1px solid var(--pub-border);
-        box-shadow: -10px 0 30px rgba(15, 23, 42, 0.06);
-        padding: 100px 32px 40px 32px;
-        display: block;
+        position: absolute;
+        top: 70px;
+        /* Sits directly flush with header base row */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff !important;
+        /* Solid Light UI */
+        border-bottom: 1px solid var(--pub-border);
+        box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05);
+
+        /* ⚠️ FIXED: Collapses vertically to 0px height. Nothing sits off-screen. */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        display: block !important;
         box-sizing: border-box;
-        /* Premium ease curve manages smooth, snappy motion speeds */
-        transition: right 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-        z-index: 1300;
+
+        /* Smooth vertical expansion transition engine */
+        transition: max-height 0.25s ease-out, opacity 0.2s ease;
+        z-index: 2300;
     }
 
+    /* --- 4. TEXT ROWS LINK INTEGRATION --- */
     .public-nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        width: 100%;
-        list-style: none;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 16px 24px 24px 24px !important;
+        /* Elegant interior margins */
+        box-sizing: border-box;
     }
 
-    /* Individual row boxes shield layer order */
     .public-nav-links li {
-        width: 100%;
-        position: relative;
-        z-index: 1310;
+        width: 100% !important;
+        display: block !important;
     }
 
-    /* Text anchor target click captures */
     .public-nav-links a {
-        font-size: 1.05rem;
-        display: block;
-        width: 100%;
-        padding: 12px 0;
-        /* Creates large touchscreen thumb tap vectors */
+        font-size: 1.05rem !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 12px 0 !important;
+        /* Touch target finger thresholds */
+        color: #0f172a !important;
+        /* Clear bold navy */
+        font-weight: 700 !important;
+        text-decoration: none !important;
         border-bottom: none !important;
-        position: relative;
-        z-index: 1320;
-        /* Floating foremost layer catches clicks with zero interference */
+    }
+
+    .public-nav-links a:hover {
+        color: var(--pub-theme-accent) !important;
     }
 
     .mobile-only-cta {
-        display: block;
-        width: 100%;
-        margin-top: 16px;
-        border-top: 1px solid var(--pub-border);
-        padding-top: 24px;
-        box-sizing: border-box;
-        z-index: 1310;
+        display: block !important;
+        width: 100% !important;
+        margin-top: 8px !important;
+        border-top: 1px solid var(--pub-border) !important;
+        padding-top: 16px !important;
     }
 
     .mobile-only-cta .portal-cta-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-        padding: 12px;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px !important;
     }
 
-    /* --- 3. PURE CSS DRAWER INTERACTION MATRIX --- */
-    /* Slide out drawer panel when trigger checkbox is checked on tap */
+    /* --- 5. THE CSS TOGGLE OVERRIDES MATRIX --- */
+    /* Expand box vertically when checked */
     .header-toggle-checkbox:checked~.public-nav {
-        right: 0;
+        max-height: 400px;
+        /* Unrolls accordion container downward cleanly */
+        opacity: 1;
     }
 
-    /* Morph three horizontal hamburger bars into a crisp close "X" marker icon */
-    .header-toggle-checkbox:checked~.header-hamburger-btn {
-        z-index: 1600;
-        /* Pull close trigger button over drawer wrapper view safely */
-    }
-
+    /* Morph hamburger bars into a clean close "X" symbol */
     .header-toggle-checkbox:checked~.header-hamburger-btn .hamburger-bar-line:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -1551,39 +1574,93 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* --- 4. PUBLIC SUB-PAGE ROW BREAKPOINTS --- */
-    /* Academics Workspace Grid Unstacking */
+    /* --- 📚 ACADEMICS DIVISION RESPONSIVE COMPACTION SYSTEM --- */
     .academics-workspace-split {
         grid-template-columns: 1fr !important;
-        gap: 32px;
+        /* Collapses left sidebar column cleanly */
+        gap: 32px !important;
     }
 
     .academics-sticky-rail {
-        position: relative;
-        top: 0;
-        width: 100%;
+        position: relative !important;
+        top: 0 !important;
+        width: 100% !important;
     }
 
+    .sticky-rail-card {
+        padding: 16px !important;
+        background-color: transparent !important;
+        /* Strips card styling on mobile rows */
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .sticky-rail-card h4 {
+        display: none !important;
+        /* Hides sidebar header text to optimize mobile room */
+    }
+
+    /* Transforms stacked sidebar blocks into a horizontal landscape swiping track */
     .rail-anchor-list {
-        flex-direction: row;
-        overflow-x: auto;
-        padding-bottom: 8px;
-        scrollbar-width: none;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        /* Unlocks horizontal thumb swipe actions */
+        gap: 10px !important;
+        padding: 0 4px 8px 4px !important;
+        scrollbar-width: none !important;
+        /* Remits scrollbars on Firefox */
     }
 
     .rail-anchor-list::-webkit-scrollbar {
-        display: none;
+        display: none !important;
+        /* Remits scrollbars on Safari and Chrome */
     }
 
     .rail-anchor-link {
-        white-space: nowrap;
-        padding: 8px 16px;
+        white-space: nowrap !important;
+        /* Prevents button titles from text-wrapping breaking layouts */
+        padding: 10px 16px !important;
+        background-color: var(--pub-bg-alt) !important;
+        border: 1px solid var(--pub-border) !important;
     }
 
-    /* Parent Resources Workspace Grid Unstacking */
-    .resources-workspace-split {
+    .rail-anchor-link:hover,
+    .rail-anchor-link.active {
+        transform: none !important;
+        /* Eliminates desktop translate text jumps on mobile glass */
+        background-color: var(--pub-theme-blue) !important;
+        color: #ffffff !important;
+        border-color: var(--pub-theme-blue) !important;
+    }
+
+    .academics-content-stream {
+        gap: 32px !important;
+    }
+
+    .curriculum-row-block {
+        padding: 24px !important;
+        /* Compresses container interior padding spacing */
+        border-radius: 12px !important;
+    }
+
+    .curriculum-row-block h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .block-lead-text {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Stacks course lists code bullets into clean vertical tracks */
+    .programs-checklist-grid {
         grid-template-columns: 1fr !important;
-        gap: 32px;
+        gap: 10px !important;
+        padding-top: 16px !important;
+    }
+
+    .program-item-bullet {
+        font-size: 0.88rem !important;
     }
 }
 
@@ -1745,6 +1822,73 @@ body {
         grid-template-columns: 1fr !important;
         /* Collapse contact details into vertical stack */
         gap: 16px;
+    }
+
+    /* --- 📱 SMALL MOBILE SCREEN ACADEMICS COMPACTION --- */
+    .academics-workspace-split {
+        gap: 16px !important;
+        /* Reduces space between navigation rail and text cards */
+    }
+
+    .sticky-rail-card {
+        padding: 0 !important;
+        /* Strips structural padding to bleed the rail full-width */
+        margin: 0 -4px !important;
+    }
+
+    /* Transform swipe buttons into high-density pills optimized for thumbs */
+    .rail-anchor-list {
+        gap: 8px !important;
+        padding-bottom: 12px !important;
+        /* Extra bottom cushion clears touch zones */
+    }
+
+    .rail-anchor-link {
+        font-size: 0.85rem !important;
+        /* Tighter type fits better on phone screens */
+        padding: 8px 14px !important;
+        border-radius: 20px !important;
+        /* Smooth pill shape design pattern */
+    }
+
+    /* Compress the core content stream section wrappers */
+    .academics-content-stream {
+        gap: 24px !important;
+        /* Brings content blocks closer together */
+    }
+
+    .curriculum-row-block {
+        padding: 20px 16px !important;
+        /* Tightens core inner margins to maximize text area */
+        border-radius: 8px !important;
+    }
+
+    .block-index-tag {
+        font-size: 0.7rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .curriculum-row-block h2 {
+        font-size: 1.25rem !important;
+        /* Caps headline size so text strings do not wrap poorly */
+        letter-spacing: -0.3px !important;
+    }
+
+    .block-lead-text {
+        font-size: 0.9rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Bullet blocks density corrections */
+    .programs-checklist-grid {
+        gap: 8px !important;
+        padding-top: 12px !important;
+    }
+
+    .program-item-bullet {
+        font-size: 0.82rem !important;
+        padding: 6px 10px !important;
+        line-height: 1.4 !important;
     }
 }
 
