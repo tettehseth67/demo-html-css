@@ -13,10 +13,9 @@
     <!-- UNIVERSAL INSTITUTIONAL SITE NAVIGATION HEADER -->
     <header class="public-site-header">
         <div class="header-container">
-
             <a href="./index.html" class="site-logo">🏫 EduManage Academy</a>
 
-            <!-- Pure CSS Responsive Navigation Trigger System -->
+            <!-- Pure CSS Hamburger Controller Elements -->
             <input type="checkbox" id="header-menu-toggle" class="header-toggle-checkbox">
             <label for="header-menu-toggle" class="header-hamburger-btn" aria-label="Toggle Menu Layout">
                 <span class="hamburger-bar-line"></span>
@@ -24,26 +23,24 @@
                 <span class="hamburger-bar-line"></span>
             </label>
 
-            <!-- Navigation Links Wrapper Matrix -->
+            <!-- ⚠️ THE DRAWER WRAPPER (Must use class="public-nav") -->
             <nav class="public-nav">
+                <!-- ⚠️ THE LINKS ARRAY (Must use class="public-nav-links") -->
                 <ul class="public-nav-links">
-                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="./public/academics.html">Academics</a></li>
                     <li><a href="./public/admissions.html">Admissions Intake</a></li>
                     <li><a href="./public/resources.html">Parent Resources</a></li>
                     <li><a href="./public/careers.html">Careers</a></li>
-                    <!-- ⚠️ FIXED: Points down into admin/ folder natively using a single dot -->
                     <li class="mobile-only-cta"><a href="./admin/gate.html" class="portal-cta-btn">Portal Login</a></li>
                 </ul>
             </nav>
-
-            <!-- Desktop Profile Gateway Entry CTA Button -->
-            <!-- ⚠️ FIXED: Points down into admin/ folder natively using a single dot -->
             <div class="header-desktop-actions">
                 <a href="./admin/gate.html" class="portal-cta-btn">System Portal Login</a>
             </div>
         </div>
     </header>
+
 
 
 
